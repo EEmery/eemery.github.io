@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- CSS -->
+  <link href='post-1-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about.html">About</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about.html">About</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+
+        <!-- MAIN CONTENT -->
+        <h1>Linear Regression</h1>
+        <p>
+          One of the first steps to getting into Artificial Intelligence, more precisely, computer vision, is understanding linear regression. It’s analog to learning Bhaskara to step into calculus.
+        </p>
+        <p>
+          Linear regression is a “tool” when trying to predict the result of a function when given a preview behavior of that one. Like predicting the price of a house based on the number of bedrooms and bathrooms.
+        </p>
+        <p>
+          To start diving into that, let’s consider another example. Let’s say we are trying to predict the lifespan of a person by analysing features like cholesterol ratio, blood pressure, sugar ratio etc. In other words, we are trying to find a function (\(h(x)\)) that, giving features (\(x_n\)), gives a value close enough to the real value (\(y\)) of a person’s lifespan. Note: “\(h(x)\)” stands for hypothesis function.
+        </p>
+        <p>
+          To find that function we’ll have access to lifespan of a lot of people and their features. With that we can create an algorithm that iterates over each person’s lifespan (\(y^i\)) and the correspondent features (\(x^i_n\)) in the data to find \(h(x)\).
+        </p>
+        
+        $$ h(x^i) \approx y^i $$
+
+        <p>
+          Mathematically, we can write \(h(x)\) by being a linear function of features (\(x_j\)) with parameters \(\theta_j\) like below:
+        </p>
+
+        $$ h(x) = \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n $$
+        
+        $$ h(x) = \sum_j \theta_j x_j $$
+
+        <p>
+          So, our goal is to find jthat minimize the following function (known as cost function):
+        </p>
+
+        $$ J(\theta) = {1\over2} \sum_i ( h(x^i_n) - y^i )^2 = {1\over2} \sum_i ( \theta_j x^i_j - y^i )^2 $$
+
+        <p>
+          Note by the sum that we’ll iterate over all data of the lifespans that we have.
+        </p>
+        <p>
+          As there are many algorithms that minimizes functions (takes the gradient), many of them in data analyses libraries, we’ll leave the heavy job to them. So, computing \(J(\theta)\) in respect to a parameter \(\theta_j\) will give us:
+        </p>
+
+        $$\nabla J(\theta) = \begin{align}\left[\begin{array}{c} \frac{\partial J(\theta)}{\partial \theta_1}  \\
+          \frac{\partial J(\theta)}{\partial \theta_2}  \\
+          \vdots\\
+          \frac{\partial J(\theta)}{\partial \theta_n} \end{array}\right]\end{align}$$
+
+        $$ \frac{\partial J(\theta)}{\partial \theta_j} = \sum_i x^{(i)}_j \left(h_\theta(x^{(i)}) - y^{(i)}\right) $$
+       
+        <h2>How Linear Regression Relates to Computer Vision</h2>
+
+        <h2>Acknowledgments and More Resources</h2>
+
+        <h3>30-01-2016</h3>
+
+        <!-- END OF CONTENT -->
+
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>
