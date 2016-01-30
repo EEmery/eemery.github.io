@@ -1,0 +1,102 @@
+/********************************************************
+ ****              MENU AND GENERAL                  ****
+ ********************************************************/
+.demo-layout-transparent
+{
+	background: url("index-cover3.png") center / cover;
+}
+
+
+/* MENU SUPERIOR E LATERAL */
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button
+{
+    color: #FFFFFF;
+}
+
+/* MENU SUPERIOR - TABS */
+.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
+{
+    font-family: "Roboto", sans-serif;
+    color: #E0E0E0;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+/* MENU SUPERIOR - TABS (HOVER)*/
+.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link:hover
+{
+    color: #FFFFFF;
+}
+
+
+/********************************************************
+ ****                POSTS GENERAL                   ****
+ ********************************************************/
+#first-row
+{
+	margin-top: 20vh;
+}
+
+.post-image
+{
+	background: #455A64 center / cover;
+	height: 30vh;
+	position: relative;
+}
+
+.post-date
+{
+	background: #FFFFFF;
+	height: 10vh;
+	position: relative;
+}
+
+h1
+{
+	font-family: 'Roboto Mono';
+	font-size: 4vh;
+	color: #FFFFFF;
+	font-weight: 400;
+	position: absolute;
+	margin: 0;
+	bottom: 2vh;
+	left: 2vh;
+}
+
+h2
+{
+	font-family: 'Roboto Mono';
+	font-size: 2.5vh;
+	color: #656565;
+	font-weight: 400;
+	margin: 0;
+	position: absolute;
+	left: 3vh;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.space
+{
+	color: #A0A0A0;
+}
+
+.button-container
+{
+	position: absolute;
+	right: 3vh;
+	transform: translate(0, -50%);
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+
+/********************************************************
+ ****              POSTS INDIVIDUAL                  ****
+ ********************************************************/
+
+ #post-1 .post-image
+ {
+ 	background: url("./post-1/post-1-cover.png") center / cover;
+ }
