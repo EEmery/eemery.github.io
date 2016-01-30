@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- CSS -->
+  <link href='style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Posts</a>
+          <a class="mdl-navigation__link" href="./about/about.html">About</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Posts</a>
+        <a class="mdl-navigation__link" href="./about/about.html">About</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+
+        <!-- ROW -->
+        <div class="mdl-grid" id="first-row">
+
+          <!-- Add spacer -->
+          <div class="mdl-cell mdl-cell--1-col"></div>
+
+          <!-- POST -->
+          <div class="mdl-cell mdl-cell--5-col" id="post-1">
+            <div class="post-container">
+
+              <div class="post-image">
+                <h1>Linear<span class="space">°</span>Regression</h1>
+              </div>
+
+              <div class="post-date">
+                <h2>30-01-2016</h2>
+
+                <div class="button-container">
+                  <button onclick="window.location.href='./post-1/post-1.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon mdl-button--colored mdl-button--accent">
+                    <i class="material-icons md-light">arrow_forward</i>
+                  </button>
+                </div>        
+
+              </div>
+
+            </div>
+          </div>
+
+        <!-- POST -->
+
+        </div>
+
+        <!-- ROW -->
+
+        <!-- ROW -->
+        
+       
+        <!-- END OF CONTENT -->
+
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>
