@@ -81,7 +81,7 @@
           To start diving into that, let’s consider another example. Let’s say we are trying to predict the lifespan of a person by analysing features like cholesterol ratio, blood pressure, sugar ratio etc. In other words, we are trying to find a function (\(h(x)\)) that, giving features (\(x_n\)), gives a value close enough to the real value (\(y\)) of a person’s lifespan. Note: “\(h(x)\)” stands for hypothesis function.
         </p>
         <p>
-          To find that function we’ll have access to lifespan of a lot of people and their features. With that we can create an algorithm that iterates over each person’s lifespan (\(y^i\)) and the correspondent features (\(x^i_n\)) in the data to find \(h(x)\).
+          To find that function we’ll have access to lifespans of a lot of people and their features. With that we can create an algorithm that iterates over each person’s lifespan (\(y^i\)) and the correspondent features (\(x^i_n\)) in the data to find \(h(x)\).
         </p>
         
         $$ h(x^i) \approx y^i $$
@@ -95,7 +95,7 @@
         $$ h(x) = \sum_j \theta_j x_j $$
 
         <p>
-          So, our goal is to find jthat minimize the following function (known as cost function):
+          So, our goal is to find \(\theta_j\) that minimize the following function (known as cost function):
         </p>
 
         $$ J(\theta) = {1\over2} \sum_i ( h(x^i_n) - y^i )^2 = {1\over2} \sum_i ( \theta_j x^i_j - y^i )^2 $$
