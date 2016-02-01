@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- CSS -->
+  <link href='../post-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+        <!-- CHANGE LANGUAGE BUTTON -->
+        <button onclick="window.location.href='post-1.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+          Read in English
+        </button>
+
+        <!-- MAIN CONTENT -->
+        <h1>Regressão Linear</h1>
+        <p>
+          Um dos primeiros passos para entrar no “mundo da inteligência artificial”, mais precisamente, visão computacional, é entender regressão linear. É como aprender Bhaskara para começar a estudar cálculo.
+        </p>
+        <p>
+          Regressão Linear é uma ferramenta geralmente utilizada quando se deseja prever a ação  de um evento que já exibe um comportamento. Em outras palavras, é prever o resultado de uma função que você desconhece, mas lhe é dado o comportamento prévio dela. Como tentar prever o custo de uma casa baseando-se em número de quartos e banheiros.
+        </p>
+        <p>
+         Para começarmos a entender, vamos considerar o seguinte exemplo, digamos que quisessemos prever o tempo de vida de uma pessoa analisando características como colesterol, pressão arterial, taxa de glicose, etc. Isto é, tentar achar uma função (\(h(x)\)) tque, dada as características (\(x_n\)), encontre um valor muito próximo do tempo de vida real (\(y\)) de uma pessoa. Note que “\(h(x)\)” vem de “função hipótese”.
+        </p>
+        <p>
+          Pra encontrar essa função teremos acesso ao tempo de vida e às respectivas características de várias pessoas. Com essa informação, seremos capazes de criar um algorítimo que itera sob cada tempo de vida (\(y^i\)) e características (\(x^i_n\)) para encontrar \(h(x)\).
+        </p>
+        
+        $$ h(x^i) \approx y^i $$
+
+        <p>
+          Matematicamente, podemos escrever \(h(x)\) como sendo uma função linear de características (\(x_j\)) com parâmetros \(\theta_j\) como mostrado abaixo:
+        </p>
+
+        $$ h(x) = \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n $$
+        
+        $$ h(x) = \sum_j \theta_j x_j $$
+
+        <p>
+          Ou seja, nosso objetivo aqui se resume a encontrar \(\theta_j\) que minimiza a seguinte função (conhecida como função de custo):
+        </p>
+
+        $$ J(\theta) = {1\over2} \sum_i ( h(x^i_n) - y^i )^2 = {1\over2} \sum_i ( \theta_j x^i_j - y^i )^2 $$
+
+        <p>
+          Note pela soma que iremos iterar sob todo os dados de tempo de vida que nós temos.
+        </p>
+        <p>
+          Como já existem vários algorítimos que minimizam funções (calculam o gradiente), muitos deles em bibliotecas de análise de dados, nós deixaremos o trabalho pesado para eles. Então, calculando \(J(\theta)\) em relação a \(\theta_j\) teremos:
+        </p>
+
+        $$\nabla J(\theta) = \begin{align}\left[\begin{array}{c} \frac{\partial J(\theta)}{\partial \theta_1}  \\
+          \frac{\partial J(\theta)}{\partial \theta_2}  \\
+          \vdots\\
+          \frac{\partial J(\theta)}{\partial \theta_n} \end{array}\right]\end{align}$$
+
+        $$ \frac{\partial J(\theta)}{\partial \theta_j} = \sum_i x^{(i)}_j \left(h_\theta(x^{(i)}) - y^{(i)}\right) $$
+       
+        <h2>Como Regressão Linear se relaciona com Visão Computacional</h2>
+
+        <p>
+          No nosso exemplo, tivemos que analisar diversos exemplos de relações entre características e tempo de vida de uma pessoa para poder encontrar uma função que prevê esse comportamento. Este processo em deep learning (campo de estudo de inteligência artificial) é comumente chamado de “aprendizado” ou “treinamento”. Intuitivo.
+        </p>
+        <p>
+          Da mesma forma que nós, humanos, com o objetivo de entender o clima de uma cidade, podemos ficar nela por diversas semanas. Um computador pode analisar dados do clima para começar a prever um comportamento desejado.
+        </p>
+        <p>
+          Este método de aprendizado que acabamos de descrever é chamado de aprendizado supervisionado. Mais tarde veremos outro tipo, conhecido como aprendizado não supervisionado.
+        </p>
+        <p>
+          Como falamos no início, regressão linear é o primeiro passo para entender visão computacional. O próximo deverá ser entender a Regressão Softmax, um método que não prevê comportamentos, mas classifica dados em classes. Com ela, por exemplo, seremos capazes de identificar qual número uma imagem está mostrando.
+        </p>
+
+        <h2>Resources</h2>
+
+        <a href="http://ufldl.stanford.edu/tutorial/supervised/LinearRegression/" class="resource">
+          Mais sobre aprendizado de máquina [EN]
+        </a>
+        <a href="http://betterexplained.com/articles/vector-calculus-understanding-the-gradient/" class="resource">
+          O que é o gradiente de uma função? [EN]
+        </a>
+
+        <h3>30-01-2016</h3>
+
+        <!-- END OF CONTENT -->
+
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>

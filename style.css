@@ -104,6 +104,14 @@ h2
 	transform: translate(0, -50%);
 }
 
+#tradutor
+{
+	position: absolute;
+	right: 5%;
+	margin-top: 6%;
+	color: #FFFFFF;
+}
+
 
 
 
