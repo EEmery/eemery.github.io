@@ -90,3 +90,11 @@ p
 {
 	width: 125%;
 }
+
+#tradutor
+{
+	position: absolute;
+	right: 5%;
+	margin-top: 6%;
+	color: #FFFFFF;
+}
