@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Softmax Regression</title>
+  <meta charset="utf-8">
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- CSS -->
+  <link href='../post-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about.html">About</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about.html">About</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+        <!-- CHANGE LANGUAGE BUTTON -->
+        <button onclick="window.location.href='post-2-br.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+          Ler em Português
+        </button>
+
+        <!-- MAIN CONTENT -->
+        <h1>Softmax Regression</h1>
+        <p>
+          Note: We highly recommend you to read our last post on linear regression for better understanding.
+        </p>
+        <p>
+          As we saw earlier, linear regression is a useful tool to predict behavior of events. Softmax regression or, if you like impressive names, multinomial logistics regression is a method to classify data in a finite number of classes.
+        </p>
+        <p>
+         For example, let’s say you’re trying to organize your discs on your new shelf and you chose to organize based their genre. Vocals, electronic, dance, soundtrack, rock, etc. Mathematically speaking, we are putting sets of features \(x^i_j\) (discs), into classes \(y^i \in {1, 2, ..., k}\).
+        </p>
+        <p>
+          Suppose that at this point, you have already placed your old discs in the shelf using our classification method and now you want to create an automatic system that tells you where to put a new disc that will come. So, we want to create a vector of functions \(h(x)\) that, giving features \(x_j\) of the disc and parameters \(\theta^k_j\), calculates the probability of that set of features (disc) belong to each class \(y^i\).
+        </p>
+
+        $$
+        \begin{align}
+        h(x) =
+        \begin{bmatrix}
+        P(y = 1 | x; \theta) \\
+        P(y = 2 | x; \theta) \\
+        \vdots \\
+        P(y = K | x; \theta)
+        \end{bmatrix}
+        =
+        \frac{1}{ \sum_{n}^{K}{\exp(\sum_{j}^{T}{\theta^n_j x^i_j}) }}
+        \begin{bmatrix}
+        \exp(\sum_{j}^{T}{\theta^1_j x_j}) \\
+        \exp(\sum_{j}^{T}{\theta^2_j x_j}) \\
+        \vdots \\
+        \exp(\sum_{j}^{T}{\theta^K_j x_j}) \\
+        \end{bmatrix}
+        \end{align}
+        $$
+
+        <p>
+          A disc who belongs to dance music, for example, may also have tracks of electronic music. That’s why we have to calculate the probability of one belong to each category. A disc may contain a 80% probability of belonging to dance, 15% of belonging to electronic and 5% of belonging to the others.
+        </p>
+        <p>
+          Again, as we saw on our last example in linear regression, our goal is to find the right parameters \(\theta^k_j\) that give us a high probability of a disc be in a class \(y^i\) when that disc belongs to that class. For that task we’ll need the cost function shown below and to iterate over a training data, in this case, the discs we’ve already placed on the shelf. The statement between brackets evaluates to 1 if it is true and 0 otherwise.
+        </p>
+
+        $$
+        \begin{align}
+        J(\theta) = - \left[ \sum_{i=1}^{m} \sum_{k=1}^{K}  \left\{y^{(i)} = k\right\} \log \frac{\exp(\sum_{j}^{T}{\theta^K_j x^i_j})}{\sum_{n=1}^K \exp(\sum_{j}^{T}{\theta^n_j x^i_j})}\right]
+        \end{align}
+        $$
+
+        <p>
+          Observe that the cost function above must be repeated to all classes. In each class, the statement between brackets needs to be changed to evaluate to 1 in the class we’re analysing. Also, by the outer sum, we can observe that we’ll iterate over all the training data to learn the pattern.
+        </p>
+        <p>
+          One time more, we’ll take the minimum value (gradient) of \(J(\theta)\) which will be:
+        </p>
+
+        $$
+        \begin{align}
+        \nabla_{\theta^{(k)}} J(\theta) = - \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = k\}  - P(y^{(i)} = k | x^{(i)}; \theta) \right) \right]  }
+        \end{align}
+        $$
+
+        <p>
+          Thus, we can calculate all the parameters  and finally find a function \(h(x)\) that classify our discs. Mission accomplished. When a new disc arrives we put their features \(x_j\) in \(h(x)\) and we’ll have, as a result, the probability for a disc being in each category.
+        </p>
+
+        <h2>Exclusive and Non-exclusive Classes</h2>
+
+        <p>
+          Classifying discs in genre like rock, electronic, folk, etc is what we often call non-exclusive classes, this is, the fact that a disc belongs to rock, doesn’t necessary mean it doesn’t belong to other classes.
+        </p>
+        <p>
+          In a case where we are trying to put books on a bookshelf based on their size, for example, large ones on the top, small ones on the bottom, we’re dealing with a exclusive classes problem, which means, a book who belongs to the class “large” doesn’t belong to the class “small”.
+        </p>      
+
+        <h2>Resources</h2>
+
+        <a href="http://ufldl.stanford.edu/wiki/index.php/Softmax_Regression" class="resource">
+          More on softmax regression (Stanford University)
+        </a>
+        <a href="https://www.tensorflow.org/versions/master/tutorials/mnist/beginners/index.html" class="resource">
+          More on softmax and digit classification
+        </a>
+
+        <h3>04-02-2016</h3>
+
+        <!-- END OF CONTENT -->
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>

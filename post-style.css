@@ -28,6 +28,8 @@
 /********************************************************
  ****                POSTS GENERAL                   ****
  ********************************************************/
+
+ /* Post Title */
 h1
 {
 	font-size: 5vh;
@@ -37,6 +39,7 @@ h1
 	/*margin: 8vh 40vh 6vh 30vh;*/
 }
 
+ /* Post Subtitles */
 h2
 {
 	font-size: 3.5vh;
@@ -46,6 +49,7 @@ h2
 	/*margin: 6vh 40vh 6vh 30vh;*/
 }
 
+ /* Notes */
 h3
 {
 	font-size: 2vh;
@@ -56,6 +60,7 @@ h3
 
 }
 
+/* Main Text */
 p
 {
 	font-family: "Roboto", sans-serif;
@@ -64,6 +69,7 @@ p
 	/*margin: 3vh 40vh 3vh 40vh;*/
 }
 
+/* Resource Links */
 .resource
 {
 	display: block;
@@ -72,6 +78,7 @@ p
 	margin: 1.5% 20% 1.5% 20%;
 }
 
+/* Translate Button */
 #tradutor
 {
 	position: absolute;

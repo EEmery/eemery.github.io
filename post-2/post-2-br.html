@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Regressão Softmax</title>
+  <meta charset="utf-8">
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- CSS -->
+  <link href='../post-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+        <!-- CHANGE LANGUAGE BUTTON -->
+        <button onclick="window.location.href='post-2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+          Read in English
+        </button>
+
+        <!-- MAIN CONTENT -->
+        <h1>Regressão Softmax</h1>
+        <p>
+          Nota: É recomendado ler o último post sobre regressão linear para o melhor entendimento deste.
+        </p>
+        <p>
+          Como vimos previamente, regressão linear é uma ferramenta utilizada para prever o comportamento de eventos. A regressão Softmax ou, se você gosta de nomes grandes, regrssão logistica multinomial é um método para classificar dados em um número finito de classes.
+        </p>
+        <p>
+         Por exemplo, digamos que você está tentando organizar seus discos na sua nova prateleira e, pra isso, você escolhe organizar de acordo com o gênero. Rock, eletrônica, dance, trilhas sonoras, etc. Matematicamente falando, estamos colocando um grupos de características \(x^i_j\) (discos), em classes \(y^i \in {1, 2, ..., k}\).
+        </p>
+        <p>
+          Vamos supor que a esta altura você já organizou seus discos antigos na prateleira usando nosso método de classificação e, agora, você quer criar um sistema automático que te diga onde você deve colocar um novo disco. Ou seja, nós queremos criar um vetor de funções \(h(x)\) que, dadas características \(x_j\) do disco e parâmetros \(\theta^k_j\), calcula a probabilidade do disco pertencer a uma classe \(y^i\).
+        </p>
+
+        $$
+        \begin{align}
+        h(x) =
+        \begin{bmatrix}
+        P(y = 1 | x; \theta) \\
+        P(y = 2 | x; \theta) \\
+        \vdots \\
+        P(y = K | x; \theta)
+        \end{bmatrix}
+        =
+        \frac{1}{ \sum_{n}^{K}{\exp(\sum_{j}^{T}{\theta^n_j x^i_j}) }}
+        \begin{bmatrix}
+        \exp(\sum_{j}^{T}{\theta^1_j x_j}) \\
+        \exp(\sum_{j}^{T}{\theta^2_j x_j}) \\
+        \vdots \\
+        \exp(\sum_{j}^{T}{\theta^K_j x_j}) \\
+        \end{bmatrix}
+        \end{align}
+        $$
+
+        <p>
+          Um disco que pertence à classe “dance music”, por exemplo, pode ter músicas que pertencem à classe “eletrônica”. É por isso que temos que calcular a probabilidade dele pertencer a cada uma das categorias. Um disco pode ter 80% de probabilidade de ser do gênero “dance music”, 15% de probabilidade de ser “eletrônica” e 5% de pertencer às demais.
+        </p>
+        <p>
+          Como vimos no nosso exemplo em regressão linear, nosso objetivo é achar o valor correto para os parâmetros \(\theta^k_j\) que nos dão uma alta probabilidade de um disco pertencer a classe \(y^i\) quando o disco for daquela classe. Pra isso, nós precisaremos iterar sob todos os dados de treinamento, neste caso, os discos que já colocamos na prateleira, e da função de custo mostrada abaixo. A expressão entre chaves resulta em 1 se ela for verdadeira e resulta em 0 caso contrário.
+        </p>
+
+        $$
+        \begin{align}
+        J(\theta) = - \left[ \sum_{i=1}^{m} \sum_{k=1}^{K}  \left\{y^{(i)} = k\right\} \log \frac{\exp(\sum_{j}^{T}{\theta^K_j x^i_j})}{\sum_{n=1}^K \exp(\sum_{j}^{T}{\theta^n_j x^i_j})}\right]
+        \end{align}
+        $$
+
+        <p>
+          Observe que a função de custo acima precisa ser repetida para todas as classes. Em cada classe, a expressão entre chaves precisa ser alterada para resultar em 1 na classe que estivermos analisando. Também, pela soma mais externa, podemos observar que teremos que iterar sob todos os dados de treinamento para aprender o padrão.
+        </p>
+        <p>
+          Mais uma vez, tomaremos o mínimo (gradiente) da função \(J(\theta)\):
+        </p>
+
+        $$
+        \begin{align}
+        \nabla_{\theta^{(k)}} J(\theta) = - \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = k\}  - P(y^{(i)} = k | x^{(i)}; \theta) \right) \right]  }
+        \end{align}
+        $$
+
+        <p>
+          E então, calculamos todos os parâmetros theta para finalmente encontramos a função \(h(x)\) que classifica nossos discos. Quando um novo disco chegar, basta colocarmos as características dele em \(h(x)\) ae teremos, como resultado, a probabilidade de um disco pertencer a cada categoria.
+        </p>
+
+        <h2>Classes Exclusivas e Não Exclusivas</h2>
+
+        <p>
+          Classificar discos de acordo com o gênero é o que frequentemente chamamos de classes não exclusivas, ou seja, o fato de um disco pertencer à classe rock não significa que ele não possa pertencer a nenhuma das demais.
+        </p>
+        <p>
+          Num caso em que temos que organizar livros em uma prateleira baseado no seu tamano, por exemplo, grandes em cima e pequenos em baixo, estamos lidando com um problema de classes exclusivas, ou seja, um livro que pertence à classe “grandes” não pertence à classe “pequenos”.
+        </p>      
+
+        <h2>Resources</h2>
+
+        <a href="http://ufldl.stanford.edu/wiki/index.php/Softmax_Regression" class="resource">
+          Mais sobre regressão softmax (Universidade de Stanford)
+        </a>
+        <a href="https://www.tensorflow.org/versions/master/tutorials/mnist/beginners/index.html" class="resource">
+          Mais sobre regressão softmax e classificação de dígitos
+        </a>
+
+        <h3>04-02-2016</h3>
+
+        <!-- END OF CONTENT -->
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>
