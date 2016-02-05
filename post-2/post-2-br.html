@@ -96,7 +96,7 @@
           Como vimos previamente, regressão linear é uma ferramenta utilizada para prever o comportamento de eventos. A regressão Softmax ou, se você gosta de nomes grandes, regrssão logistica multinomial é um método para classificar dados em um número finito de classes.
         </p>
         <p>
-         Por exemplo, digamos que você está tentando organizar seus discos na sua nova prateleira e, pra isso, você escolhe organizar de acordo com o gênero. Rock, eletrônica, dance, trilhas sonoras, etc. Matematicamente falando, estamos colocando um grupos de características \(x^i_j\) (discos), em classes \(y^i \in {1, 2, ..., k}\).
+         Por exemplo, digamos que você está tentando organizar seus discos na sua nova prateleira e, pra isso, você escolhe organizar de acordo com o gênero. Rock, eletrônica, dance, trilhas sonoras, etc. Matematicamente falando, estamos colocando um grupos de características \(x^i_j\) (discos), em classes \(y^i \in \{1, 2, ..., k\}\).
         </p>
         <p>
           Vamos supor que a esta altura você já organizou seus discos antigos na prateleira usando nosso método de classificação e, agora, você quer criar um sistema automático que te diga onde você deve colocar um novo disco. Ou seja, nós queremos criar um vetor de funções \(h(x)\) que, dadas características \(x_j\) do disco e parâmetros \(\theta^k_j\), calcula a probabilidade do disco pertencer a uma classe \(y^i\).
@@ -126,7 +126,7 @@
           Um disco que pertence à classe “dance music”, por exemplo, pode ter músicas que pertencem à classe “eletrônica”. É por isso que temos que calcular a probabilidade dele pertencer a cada uma das categorias. Um disco pode ter 80% de probabilidade de ser do gênero “dance music”, 15% de probabilidade de ser “eletrônica” e 5% de pertencer às demais.
         </p>
         <p>
-          Como vimos no nosso exemplo em regressão linear, nosso objetivo é achar o valor correto para os parâmetros \(\theta^k_j\) que nos dão uma alta probabilidade de um disco pertencer a classe \(y^i\) quando o disco for daquela classe. Pra isso, nós precisaremos iterar sob todos os dados de treinamento, neste caso, os discos que já colocamos na prateleira, e da função de custo mostrada abaixo. A expressão entre chaves resulta em 1 se ela for verdadeira e resulta em 0 caso contrário.
+          Como vimos no nosso exemplo em regressão linear, nosso objetivo é achar o valor correto para os parâmetros \(\theta^k_j\) que nos dão uma alta probabilidade de um disco pertencer a classe \(y^i\) quando o disco for daquela classe. Pra isso, nós precisaremos iterar sob todos os dados de treinamento, neste caso, os discos que já colocamos na prateleira, e da função de custo mostrada abaixo. A expressão entre chaves resulta em 1 se ela for verdadeira e em 0 caso contrário.
         </p>
 
         $$
@@ -149,7 +149,7 @@
         $$
 
         <p>
-          E então, calculamos todos os parâmetros theta para finalmente encontramos a função \(h(x)\) que classifica nossos discos. Quando um novo disco chegar, basta colocarmos as características dele em \(h(x)\) ae teremos, como resultado, a probabilidade de um disco pertencer a cada categoria.
+          E então, calculamos todos os parâmetros \(\theta\) para finalmente encontramos a função \(h(x)\) que classifica nossos discos. Quando um novo disco chegar, basta colocarmos as características dele em \(h(x)\) e teremos, como resultado, a probabilidade de um disco pertencer a cada categoria.
         </p>
 
         <h2>Classes Exclusivas e Não Exclusivas</h2>
