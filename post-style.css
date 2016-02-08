@@ -93,8 +93,9 @@ p
  ********************************************************/
 
 @media only screen and (max-width: 768px) {
-	h1 {margin: 4% 5% 3% 3.75%;}
-	h2 {margin: 3% 5% 3% 3.75%;}
-	h3 {margin: 3% 5% 3% 3.75%;}
-	p {margin: 1.5% 5% 1.5% 5%;}
+	h1 {margin: 8% 5% 3% 3.75%;}
+	h2 {margin: 6% 5% 3% 3.75%;}
+	h3 {margin: 6% 5% 3% 3.75%;}
+	p {margin: 3% 5% 1.5% 5%; font-size: 3vh;}
+	.resource {margin: 3% 5% 1.5% 5%; font-size: 3vh;}
 }
