@@ -106,7 +106,7 @@ p
 		font-size: 3vh;
 	}	
 	p {
-		margin: 3% 5% 1.5% 5%;
+		margin: 5% 5% 1.5% 5%;
 		font-size: 3.5vh;
 	}
 	.resource {
@@ -115,5 +115,7 @@ p
 	}
 	#tradutor {
 		position: absolute;
+		left: 3.75%;
+		margin-top: 13%;
 	}
 }
