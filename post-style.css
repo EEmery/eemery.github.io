@@ -92,7 +92,7 @@ p
  ****            POSTS GENERAL (PHONES)              ****
  ********************************************************/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
 	h1 {
 		margin: 25% 5% 3% 3.75%;
 		font-size: 6vh;
