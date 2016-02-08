@@ -1,0 +1,49 @@
+/********************************************************
+ ****              MENU AND GENERAL                  ****
+ ********************************************************/
+/* MENU SUPERIOR E LATERAL */
+.mdl-layout__header,
+.mdl-layout__drawer-button
+{
+    color: #FFFFFF;
+}
+
+/* MENU SUPERIOR - TABS */
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
+{
+    font-family: "Roboto", sans-serif;
+    color: #E0E0E0;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+/* MENU SUPERIOR - TABS (HOVER)*/
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link:hover
+{
+    color: #FFFFFF;
+}
+
+
+
+/********************************************************
+ ****                POSTS GENERAL                   ****
+ ********************************************************/
+img
+{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+}
+
+.robot
+{
+	margin-top: 4%;
+	width: 25%;
+}
+
+.message
+{
+	width: 40%;
+}
+
