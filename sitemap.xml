@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://eemery.github.io/sitemap.xml">
+
+	<url>
+		<loc>http://eemery.github.io/post-2/</loc>
+		<lastmod>2016-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<url>
+		<loc>http://eemery.github.io/post-1/</loc>
+		<lastmod>2016-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<url>
+		<loc>http://eemery.github.io/about/</loc>
+		<lastmod>2016-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+
+</urlset>
