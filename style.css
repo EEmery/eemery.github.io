@@ -126,3 +126,20 @@ h2
  {
  	background: url("./post-2/post-2-cover.png") center / cover;
  }
+
+/********************************************************
+ ****                    PHONES                      ****
+ ********************************************************/
+
+@media only screen and (max-width: 960px) {
+	h1 {
+		font-size: 150%;
+	}
+	h2 {
+		font-size: 100%;
+	}
+	#tradutor {
+		position: static;
+		margin: 6% 0% 6% 6%;
+	}
+}
