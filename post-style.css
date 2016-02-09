@@ -94,7 +94,7 @@ p
 
 @media only screen and (max-width: 960px) {
 	h1 {
-		margin: 25% 5% 3% 3.75%;
+		margin: 35% 5% 3% 3.75%;
 		font-size: 6vh;
 	}
 	h2 {
@@ -114,8 +114,10 @@ p
 		font-size: 3.5vh;
 	}
 	#tradutor {
-		position: absolute;
-		left: 3.75%;
-		margin-top: 13%;
+		transform: translate(0, -115%);
+	}
+	.mdl-layout__header,
+	.mdl-layout__drawer-button {
+		color: #000000;
 	}
 }
