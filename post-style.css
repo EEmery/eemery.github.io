@@ -69,6 +69,19 @@ p
 	/*margin: 3vh 40vh 3vh 40vh;*/
 }
 
+.img-container
+{
+	height: 50vh;
+}
+
+.in-text-img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
 /* Resource Links */
 .resource
 {

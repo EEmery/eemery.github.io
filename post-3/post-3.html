@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>The Bias Parameter</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="artificial intelligence, computer vision, ai, python, regression, softmax, tensorflow, linear regression">
+  <meta name="description" content="Softmax regression or is a method to classify data in a finite number of classes. For example, let’s say you’re trying to organize your discs on your new shelf and you chose to organize based their genre. Vocals, electronic, dance, soundtrack, rock, etc.">
+  <meta name="author" content="Eduardo Emery">
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- Makes it responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS -->
+  <link href='../post-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics Tracking Code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73369101-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- ######################################### -->
+  <!--                   MENU                    -->
+  <!-- ######################################### -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span> <!-- TITLE -->
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about.html">About</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about.html">About</a>
+      </nav>
+    </div>
+    
+
+  <!-- ######################################### -->
+  <!--              MAIN CONTENT                 -->
+  <!-- ######################################### -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      
+        <!-- CHANGE LANGUAGE BUTTON -->
+        <button onclick="window.location.href='post-3-br.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+          Ler em Português
+        </button>
+
+        <!-- MAIN CONTENT -->
+        <h1>The Bias Parameter</h1>
+        <p>
+          Note: We highly recommend you to read our last post on softmax regression for better understanding.
+        </p>
+        <p>
+          A classical exercise that one do, after learning softmax regression, is digit recognition with the MNIST Dataset. In this exercise we have tons of training images with handwritten digits that goes from 0 to 9, each one has a label that tells our program the number that shows up in the picture.
+        </p>
+        <p>
+          Using softmax, we can train our program with those images to find a vector \(H(x)\) that, given the pixel intensities (features), finds the probability of an image being on each class. Our classes goes from 0 to 9, where each class represents a number.
+        </p>
+        <p>
+          On further posts we’ll dive deeper into the MNIST exercise.
+        </p>
+
+        <h2>The Benford’s Law</h2>
+
+        <p>
+          After training our program, if we ask it to classify an image, it is going to initialize with an uniform distribution for all classes. The probability of being a “9” will be the same as being a “1” or any other class. As it observes each pixel, the probabilities changes giving us, in the end, a result.
+        </p>
+        <p>
+          But in real life problems, we don’t usually have normal distributions to start with. As Benford's Law says, digits tend to follow a curious distribution, the smaller a digit is, the higher is it’s frequency of appearance. Books, electric bills, stock prices, population, whatever it is, the Benford Law will be there.
+        </p>
+
+        <div class="img-container">
+          <img class="in-text-img" src="post-3-img-1.png">
+        </div>
+
+        <p>
+          When our program initializes, it shouldn’t start with a uniform distribution. The probability of an image be showing a “1” is bigger than a “9”. In this case where we’re classifying digits the initial distribution is not uniform.
+        </p>
+
+        <h2>The Bias Parameter</h2>
+
+        <p>
+          In softmax regression we saw how to find our vector \(h(x)\). It can be written as follows:
+        </p>
+
+        $$
+        H(x) = \left[\begin{array}{c}
+        \theta^1_1 x_1 + \theta^1_2 x_2 + \cdots & \theta^1_n x_n \\
+        \theta^2_1 x_1 + \theta^2_2 x_2 + \cdots & \theta^2_n x_n \\
+        | \\
+        \theta^k_1 x_1 + \theta^k_2 x_2 + \cdots & \theta^k_n x_n
+        \end{array}\right]
+
+        \quad \textrm{or} \quad
+
+        H(x) = W X
+        $$
+
+        <p>
+          Where \(W\) is a matrix that carries our parameters \(\theta\) and \(X\) carries our features \(x_i\).
+        </p> 
+        
+        $$
+        H(x) = \left[\begin{array}{cccc}
+        \theta^1_1 & \theta^1_2 & \cdots & \theta^1_n \\
+        \theta^2_1 & \theta^2_2 & \cdots & \theta^2_n \\
+        | & | & | & | \\
+        \theta^k_1 & \theta^k_2 & \cdots & \theta^k_n
+        \end{array}\right]
+        .
+        \left[\begin{array}{c}
+        x_1 \\
+        x_2 \\
+        | \\
+        x_n 
+        \end{array}\right]
+        $$
+
+        <p>
+          But now, we know that the initial distribution is not uniform, so, we must add to our hypothesis vector (\(H(x)\)) another parameter, the bias parameter (\(b\)). He’ll do the job of starting the distribution in a better way.
+        </p> 
+
+        $$
+        H(x) = W X + B
+
+        \quad \textrm{where} \quad
+        
+        B = \left[\begin{array}{c}
+        b^1 \\
+        b^2 \\
+        | \\
+        b^k
+        \end{array}\right]
+        $$
+
+        <p>
+          The matrix \(B\) carries the initial frequency of digit distributions. High values for small digits and low values for large ones. Just as Benford Law says.
+        </p>
+
+        <h2>Finding the Bias</h2>
+
+        <p>
+          Benford’s Law was just an illustration of how distributions are non-uniform even if they seem to be uniform. But the frequency of appearance of a digit can be different depending on what you’ll be classifying.
+        </p>
+        <p>
+          To find good bias parameters you don’t need anti-intuitive ideas of distributions like Benford’s one (that’s what it looks like to me). If you focus on building a good training data you’re good to go.
+        </p>
+        <p>
+          Let’s take another example to illustrate this better. Let’s say you’re classifying landscape pictures into three classes, snowy, beachy and urban ones. As there are less places in the world that rains snow, probably, a small amount of pictures will fall into that category. In other words, our bias parameter for snowy landscapes will be much smaller than the beachy and urban ones.
+        </p>
+        <p>
+          To build your training set you ask your friends to send you photos. But you live in Siberia and so your friends does. Most of the training images you’ll get will be snowy landscapes. Because of that, our model will have a higher bias of classifying a next image into a snowy one.
+        </p>
+        <p>
+          The training data will talk by itself. That’s why it’s so important to have a random dataset, and by random I mean, that reflects better the problem the program will constantly be facing.
+        </p>
+
+        <h2>Resources</h2>
+
+        <a href="http://ufldl.stanford.edu/wiki/index.php/Softmax_Regression" class="resource">
+          MNIST Dataset
+        </a>
+        <a href="https://www.tensorflow.org/versions/0.6.0/tutorials/mnist/beginners/index.html#the-mnist-data" class="resource">
+          Softmax regression and the MNIST Dataset (Google Tensoflow)
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Benford%27s_law" class="resource">
+          Benford's Law
+        </a>
+        <a href="https://www.youtube.com/watch?v=XXjlR2OK1kM" class="resource">
+          More on Benford's Law (Numberphile Video)
+        </a>
+
+        <h3>11-02-2016</h3>
+
+        <!-- END OF CONTENT -->
+
+      </div>
+        
+    </main>
+  </div>
+    
+</body>
+</html>

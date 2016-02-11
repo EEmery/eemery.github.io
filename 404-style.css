@@ -54,11 +54,11 @@ img
 
 @media only screen and (max-width: 960px) {
 	.robot {
-		margin-top: 12%;
-		width: 60%;
+		margin-top: 16%;
+		width: 66%;
 	}
 	.message {
-		width: 80%;
+		width: 86%;
 	}
 	.mdl-layout__header,
 	.mdl-layout__drawer-button {

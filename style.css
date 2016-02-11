@@ -4,6 +4,7 @@
 .demo-layout-transparent
 {
 	background: url("index-cover.png") center / cover;
+	position: fixed;
 }
 
 
@@ -109,6 +110,7 @@ h2
 	position: absolute;
 	right: 5%;
 	margin-top: 6%;
+	margin-bottom: 2%;
 	color: #FFFFFF;
 }
 
@@ -125,6 +127,11 @@ h2
  #post-2 .post-image
  {
  	background: url("./post-2/post-2-cover.png") center / cover;
+ }
+
+ #post-3 .post-image
+ {
+ 	background: url("./post-3/post-3-cover.png") center / cover;
  }
 
 /********************************************************
