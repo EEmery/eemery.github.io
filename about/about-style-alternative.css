@@ -4,6 +4,7 @@
 .demo-layout-transparent
 {
 	background: url("../index-cover.png") center / cover;
+	position: fixed;
 }
 
 
