@@ -4,6 +4,7 @@
 .demo-layout-transparent
 {
 	background: url("../index-cover.png") center / cover;
+	position: relative;
 }
 
 
@@ -55,7 +56,7 @@ p
 
 .mdl-grid
 {
-	margin-top: 8%;
+	margin-top: 6%;
 }
 
 #about
@@ -78,17 +79,19 @@ p
 	border-radius: 50%;
 }
 
-.mdl-grid .network-icons
+.spacer
 {
-	margin-top: 10%;
-	margin-right: auto;
-	margin-left: auto;
-	width: 70%;
+	display: inline-block;
+	width: 22.22%;
+	border: 0px;
 }
 
-.network-icons img
-{
-	width: 125%;
+.social-ico
+{	
+	width: 9.11%;
+	margin: 16% 1% 0% 1%;
+	border: 0px;
+	padding: 0px;
 }
 
 #tradutor
@@ -97,4 +100,37 @@ p
 	right: 5%;
 	margin-top: 6%;
 	color: #FFFFFF;
+}
+
+
+/********************************************************
+ ****                    PHONES                      ****
+ ********************************************************/
+
+@media only screen and (max-width: 960px) {
+	.spacer {
+		display: inline-block;
+		width: 14.28%;
+		border: 0px;
+	}
+
+	.social-ico {	
+		width: 12.28%;
+		margin: 14% 1% 4% 1%;
+		border: 0px;
+		padding: 0px;
+	}
+
+	.mdl-grid {
+		margin-top: 10%;
+	}
+
+	#about, #social {
+		width: 100vh;
+	}
+
+	#tradutor {
+		position: static;
+		margin: 6% 0% 6% 6%;
+	}
 }

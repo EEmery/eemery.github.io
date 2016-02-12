@@ -4,7 +4,6 @@
 .demo-layout-transparent
 {
 	background: url("../index-cover.png") center / cover;
-	position: fixed;
 }
 
 
@@ -56,7 +55,7 @@ p
 
 .mdl-grid
 {
-	margin-top: 6%;
+	margin-top: 8%;
 }
 
 #about
@@ -79,19 +78,17 @@ p
 	border-radius: 50%;
 }
 
-.spacer
+.mdl-grid .network-icons
 {
-	display: inline-block;
-	width: 14.28%;
-	border: 0px;
+	margin-top: 10%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 70%;
 }
 
-.social-ico
-{	
-	width: 12.28%;
-	margin: 12% 1% 4% 1%;
-	border: 0px;
-	padding: 0px;
+.network-icons img
+{
+	width: 125%;
 }
 
 #tradutor
