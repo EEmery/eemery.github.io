@@ -133,10 +133,11 @@ h2
 		width: 100%;
 	}
 	.post-container {
-		height: 70vh;
+		height: 60vh;
 	}
 	h1 {
 		font-size: 150%;
+		margin-top: 6%;
 	}
 	h2 {
 		font-size: 90%;
