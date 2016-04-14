@@ -1,39 +1,46 @@
 /********************************************************
  ****              MENU AND GENERAL                  ****
  ********************************************************/
-.demo-layout-transparent
+.demo-layout
 {
-	background: url("index-cover.png") center / cover;
+	/*background: url("index-cover.png") center / cover;*/
+	background: #ffffff center / cover;
 	position: fixed;
 }
 
-
 /* MENU SUPERIOR E LATERAL */
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button
+.mdl-layout__header,
+.dl-layout__drawer-button
 {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 /* MENU SUPERIOR - TABS */
-.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
 {
     font-family: "Roboto", sans-serif;
-    color: #E0E0E0;
+    color: #E0E0E0;   /* #616161 for white backgrounds */
     font-weight: 500;
     font-size: 100%;
 }
 
 /* MENU SUPERIOR - TABS (HOVER)*/
-.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link:hover
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link:hover
 {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 
 /********************************************************
  ****                POSTS GENERAL                   ****
  ********************************************************/
+.page-content
+{
+	margin: auto;
+	width: 90%;
+}
+
+
 #first-row
 {
 	margin-top: 10%;
@@ -42,67 +49,49 @@
 
 .post-container
 {
-	height: 40vh;
+	background-color: #ffffff;
+	height: 50vh;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+	transition: box-shadow, 0.3s, linear, 0s;
+}
+
+.post-container:hover
+{
+	box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .post-image
 {
-	background: #455A64 center / cover;
-	height: 75%;
+	height: 70%;
 	position: relative;
 }
 
-.post-date
+.post-description
 {
-	background: #FFFFFF;
-	height: 25%;
+	height: 30%;
 	position: relative;
+	display: block;
 }
 
 h1
 {
-	font-family: 'Roboto Mono';
-	font-size: 200%;
-	color: #FFFFFF;
+	font-family: 'Roboto';
+	font-size: 150%;
+	color: #656565; /* #656565 if dark background */
 	font-weight: 400;
-	position: absolute;
-	margin: 0;
-	bottom: 6%;
-	left: 3%;
+	margin: 4% 0 0 6%;
+	padding: 0 0 0 0;
 }
 
 h2
 {
-	font-family: 'Roboto Mono';
-	font-size: 120%;
-	color: #656565;
+	font-family: 'Roboto';
+	font-size: 90%;
+	color: #656565; /* #656565 if dark background */
 	font-weight: 400;
-	margin: 0;
-	position: absolute;
-	left: 3%;
-	top: 50%;
-	transform: translate(0, -50%);
-}
-
-.space
-{
-	color: #A0A0A0;
-}
-
-.button-container
-{
-	position: absolute;
-	right: 5%;
-	transform: translate(0, -50%);
-}
-
-.material-icons.md-24
-{
-	font-size: 150%;
-	color: rgba(255, 255, 255, 1);
-	position: absolute;
-	left: 18%;
-	transform: translate(0, -50%);
+	margin: 0 0 0 6%;
+	padding: 0 0 0 0;
 }
 
 #tradutor
@@ -121,17 +110,17 @@ h2
 
  #post-1 .post-image
  {
- 	background: url("./post-1/post-1-cover.png") center / cover;
+ 	background: url("./post-1/post-1-cover-md.png") center / cover;
  }
 
  #post-2 .post-image
  {
- 	background: url("./post-2/post-2-cover.png") center / cover;
+ 	background: url("./post-2/post-2-cover-md.png") center / cover;
  }
 
  #post-3 .post-image
  {
- 	background: url("./post-3/post-3-cover.png") center / cover;
+ 	background: url("./post-3/post-3-cover-md.png") center / cover;
  }
 
 /********************************************************
@@ -139,11 +128,16 @@ h2
  ********************************************************/
 
 @media only screen and (max-width: 960px) {
+	.page-content
+	{
+		margin: auto;
+		width: 100%;
+	}
 	h1 {
 		font-size: 150%;
 	}
 	h2 {
-		font-size: 100%;
+		font-size: 190%;
 	}
 	#tradutor {
 		position: static;
