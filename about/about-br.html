@@ -39,17 +39,13 @@
     
 <body>
 
-  <!-- ######################################### -->
-  <!--                   MENU                    -->
-  <!-- ######################################### -->
-
-  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <div class="demo-layout mdl-layout mdl-js-layout">
       
-    <header class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
 
         <!-- Title -->
-        <span class="mdl-layout-title"></span> <!-- TITLE -->
+        <span class="mdl-layout-title"></span>
           
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
@@ -65,17 +61,15 @@
     
     <!-- Sidebar navigation -->
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title"></span> <!-- TITLE -->
+      <span class="mdl-layout-title"></span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
         <a class="mdl-navigation__link" href="">Sobre</a>
       </nav>
-    </div>
-    
+    </div>    
 
-  <!-- ######################################### -->
-  <!--              MAIN CONTENT                 -->
-  <!-- ######################################### -->
+
+  <!-- MAIN CONTENT -->
 
     <main class="mdl-layout__content">
       <div class="page-content">
@@ -84,11 +78,8 @@
         <!-- CONTENT HERE -->
         <div class="mdl-grid">
 
-          <!-- Add a spacer -->
-          <div class="mdl-cell mdl-cell--2-col"></div>
-
           <!-- ABOUT ME TEXT -->
-          <div class="mdl-cell mdl-cell--5-col" id="about">
+          <div class="mdl-cell mdl-cell--8-col about-container">
             <h1>Sobre</h1>
             <p>
               Desculpe por frustrá-lo fazendo você vir até aqui e descobrir que não há um texto relevante sobre mim. É que a parte mais difícil de começar este blog, ou seja lá como você queira chamar, foi encontrar algo para escrever aqui. Contudo eu vou deixar algumas redes sociais minhas pra você poder me encontrar. <br><br>Eduardo Emery
@@ -96,24 +87,25 @@
           </div>
 
           <!-- PHOTO AND SOCIAL NETWORKS -->
-          <div class="mdl-cell mdl-cell--3-col" id="social">
+          <div class="mdl-cell mdl-cell--4-col social-container">
 
             <img src="profile-pic.jpg" class="profile-pic">
+            
+            <hr>
 
-
-            <div class="spacer"></div><a href="https://twitter.com/emerydudu"><img  class="social-ico" src="twitter-icon.png"
-            ></a><a href="https://plus.google.com/u/0/+EduardoEmery"><img class="social-ico" src="googleplus-icon.png"
-            ></a><a href="https://www.facebook.com/eduardo.emery.7"><img class="social-ico" src="facebook-icon.png"
-            ></a><a href="https://www.instagram.com/emery.e/"><img class="social-ico" src="instagram-icon.png"
-            ></a><a href="https://br.linkedin.com/in/eduardo-emery-a1643383"><img class="social-ico" src="linkedin-icon.png"
-            ></a><div class="spacer"></div>
-       
+            <div class="ico-container">
+              <img onclick="window.location.href='https://twitter.com/emerydudu'" src="twitter-icon-grey.png"/
+              ><img onclick="window.location.href='https://plus.google.com/u/0/+EduardoEmery" src="googleplus-icon-grey.png"/
+              ><img onclick="window.location.href='https://www.facebook.com/eduardo.emery.7'" src="facebook-icon-grey.png"/
+              ><img onclick="window.location.href='https://www.instagram.com/emery.e/'" src="instagram-icon-grey.png"/
+              ><img onclick="window.location.href='https://br.linkedin.com/in/eduardo-emery-a1643383'" src="linkedin-icon-grey.png"/>
+            </div>
           </div>
 
         </div>
 
         <!-- CHANGE LANGUAGE BUTTON -->
-        <button onclick="window.location.href='about.html'" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="tradutor">
+        <button onclick="window.location.href='about.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
           Read in English
         </button>
         
