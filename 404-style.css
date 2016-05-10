@@ -8,6 +8,15 @@
     color: #FFFFFF;
 }
 
+/* MENU SUPERIOR AND LATERAL */
+.mdl-layout__header,
+.dl-layout__drawer-button
+{
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
 /* MENU SUPERIOR - TABS */
 .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
 {

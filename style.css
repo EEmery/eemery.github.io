@@ -8,11 +8,13 @@
 	position: fixed;
 }
 
-/* MENU SUPERIOR E LATERAL */
+/* MENU SUPERIOR AND LATERAL */
 .mdl-layout__header,
 .dl-layout__drawer-button
 {
     color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 
 /* MENU SUPERIOR - TABS */
@@ -51,14 +53,14 @@
 {
 	background-color: #ffffff;
 	height: 50vh;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 	cursor: pointer;
 	transition: box-shadow, 0.3s, linear, 0s;
 }
 
 .post-container:hover
 {
-	box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .post-image
