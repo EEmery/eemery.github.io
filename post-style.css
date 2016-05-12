@@ -109,6 +109,12 @@ p
 	color: #FFFFFF;
 }
 
+#comments-container
+{
+	width: 700px;
+	margin: auto;
+}
+
 
 /********************************************************
  ****            POSTS GENERAL (PHONES)              ****

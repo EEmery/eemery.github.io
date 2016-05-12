@@ -180,6 +180,31 @@
 
         <h3>04-02-2016</h3>
 
+        <!-- COMMENTS SECTION -->
+
+        <script src="https://apis.google.com/js/plusone.js"></script>
+        <div id="comments-container">
+          <div class="g-comments"
+              data-href="http://eemery.github.io/post-2/post-2-br.html"
+              data-first_party_property="BLOGGER"
+              data-view_type="FILTERED_POSTMOD">
+          </div>
+        </div>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+        <script>
+          $(function() {
+            var winSize = window.innerWidth;
+            var commentBoxMaxSize = 700;
+            if (winSize < commentBoxMaxSize) {
+              $('.g-comments').attr('data-width', (window.innerWidth-6).toString());
+              $('#comments-container').attr('style', ('width: ').concat((window.innerWidth-5).toString()).concat('px;'));
+            }
+            else {
+              $('.g-comments').attr('data-width', (commentBoxMaxSize-1).toString());
+            }
+          });
+        </script>
+
         <!-- END OF CONTENT -->
 
       </div>
