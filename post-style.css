@@ -107,6 +107,7 @@ p
 	right: 3%;
 	margin-top: 0%;
 	color: #FFFFFF;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #comments-container

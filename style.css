@@ -4,7 +4,7 @@
 .demo-layout
 {
 	/*background: url("index-cover.png") center / cover;*/
-	background: #ffffff center / cover;
+	background: #EEEEEE center / cover;
 	position: fixed;
 }
 
@@ -55,12 +55,12 @@
 	height: 50vh;
 	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 	cursor: pointer;
-	transition: box-shadow, 0.3s, linear, 0s;
+	transition: box-shadow, 0.25s, linear, 0s;
 }
 
 .post-container:hover
 {
-	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .post-image
@@ -103,6 +103,7 @@ h2
 	margin-top: 6%;
 	margin-bottom: 2%;
 	color: #FFFFFF;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
