@@ -1,0 +1,131 @@
+<!--     o      Hello, fellow programmer, -->
+<!--  ___|___   it would be a pleasure    -->
+<!-- | O   O |  to be forked on GitHub    -->
+<!-- |___v___|                            -->
+<!--       http://github.com/EEmery       -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>iot</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="./favicon.png" />
+    
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Makes it responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS -->
+  <link href='./post-style.css' type="text/css" rel='stylesheet'>
+  
+  <!-- Used fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,100' rel='stylesheet' type='text/css'>
+
+  <!-- MathJax -->
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": {
+      scale: 100
+    }});
+  </script>
+    
+</head>
+    
+<body>
+
+  <!-- MENU -->
+
+  <div class="mdl-layout mdl-js-layout">
+      
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+
+        <!-- Title -->
+        <span class="mdl-layout-title"></span>
+          
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+          
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+          <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+        </nav>
+
+      </div>
+    </header>
+    
+    <!-- Sidebar navigation -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"></span> 
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
+        <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
+      </nav>
+    </div>
+    
+
+  
+  <main class="mdl-layout__content">
+    <div class="page-content">
+  <!-- MAIN CONTENT -->
+        
+        <!-- CHANGE LANGUAGE BUTTON -->
+        <button onclick="window.location.href='post-1-br.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+          BUTTON
+        </button>
+
+
+  <!-- END OF CONTENT -->
+    </div>
+  </main>
+        
+  </div>
+    
+</body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>  <!-- Imports Firebase-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>       <!-- Imports the Google Auuthentication SDK-->
+<script>
+  // Initialize Firebase
+  firebase.initializeApp({
+    apiKey: "AIzaSyD6wOWvFNTYrwBS185opmS1J3VYEiu6Vwo",
+    authDomain: "playground-iot.firebaseapp.com",
+    databaseURL: "https://playground-iot.firebaseio.com",
+    storageBucket: "playground-iot.appspot.com",
+  });
+
+  var provider = new firebase.auth.GoogleAuthProvider();    // Create an instance of the Google provider object
+
+  firebase.auth().signInWithRedirect(provider);
+  
+  firebase.auth().getRedirectResult().then(function(result) {
+    if (result.credential) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+    }
+    // The signed-in user info.
+    var user = result.user;
+
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+
+
+
+</script>
