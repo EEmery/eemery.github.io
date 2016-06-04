@@ -78,7 +78,7 @@
   <!-- MAIN CONTENT -->
         
         <!-- CHANGE LANGUAGE BUTTON -->
-        <button onclick="window.location.href='post-1-br.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
           BUTTON
         </button>
 
@@ -92,8 +92,9 @@
 </body>
 </html>
 
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>  <!-- Imports Firebase-->
-<script src="https://apis.google.com/js/platform.js" async defer></script>       <!-- Imports the Google Auuthentication SDK-->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script> <!-- Ajax CDN-->
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>   <!-- Imports Firebase-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>        <!-- Imports the Google Auuthentication SDK-->
 <script>
   // Initialize Firebase
   firebase.initializeApp({
@@ -103,8 +104,10 @@
     storageBucket: "playground-iot.appspot.com",
   });
 
+  var database = firebase.database().ref('arduino/')
   var provider = new firebase.auth.GoogleAuthProvider();    // Create an instance of the Google provider object
 
+  // Checks for user authentication
   if (firebase.auth() == null) {
     firebase.auth().signInWithRedirect(provider);
     
@@ -130,6 +133,11 @@
   else {
     alert("logged in!");
   }
+
+  // When button is clicked, changes firebase server
+  $('.mdl-button').click(function() {
+    database.set({"button": "on"});
+  });
 
 
 </script>
