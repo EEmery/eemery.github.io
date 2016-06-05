@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- CSS -->
-  <link href='./post-style.css' type="text/css" rel='stylesheet'>
+  <!-- <link href='./post-style.css' type="text/css" rel='stylesheet'> -->
   
   <!-- Used fonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
@@ -77,11 +77,15 @@
     <div class="page-content">
   <!-- MAIN CONTENT -->
         
-        <!-- CHANGE LANGUAGE BUTTON -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="tradutor">
-          BUTTON
+        <!-- SIGN IN WITH GOOGLE -->
+        <button disabled class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="sign-in-button">
+          Sign in with Google
         </button>
 
+        <!-- CHANGE SERVER BUTTON STATE -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="button">
+          BUTTON
+        </button>
 
   <!-- END OF CONTENT -->
     </div>
@@ -92,64 +96,189 @@
 </body>
 </html>
 
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script> <!-- Ajax CDN-->
+
+
+
+
+
+
+
+<style>
+/********************************************************
+ ****              MENU AND GENERAL                  ****
+ ********************************************************/
+/* MENU SUPERIOR E LATERAL */
+.mdl-layout__header,
+.mdl-layout__drawer-button
+{
+    color: #FFFFFF;
+}
+
+/* MENU SUPERIOR AND LATERAL */
+.mdl-layout__header,
+.dl-layout__drawer-button
+{
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+/* MENU SUPERIOR - TABS */
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link
+{
+    font-family: "Roboto", sans-serif;
+    color: #E0E0E0;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+/* MENU SUPERIOR - TABS (HOVER)*/
+.mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link:hover
+{
+    color: #FFFFFF;
+}
+
+
+/********************************************************
+ ****           POSTS GENERAL (DESKTOP)              ****
+ ********************************************************/
+
+/* Buttons */
+#button
+{
+  color: #FFFFFF;
+  margin: 3% 0% 0% 3%;
+}
+
+#sign-in-button
+{
+  position: absolute;
+  right: 3%;
+  color: #000000;
+  margin-top: 3%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/********************************************************
+ ****            POSTS GENERAL (PHONES)              ****
+ ********************************************************/
+
+@media only screen and (max-width: 960px) {
+  #sign-in-button {
+    margin-top: 25%;
+    margin-left: 3.75%;
+    position: static;
+  }
+  .mdl-layout__header,
+  .mdl-layout__drawer-button {
+    color: #000000;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
 <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>   <!-- Imports Firebase-->
-<script src="https://apis.google.com/js/platform.js" async defer></script>        <!-- Imports the Google Auuthentication SDK-->
 <script>
   // Initialize Firebase
-  firebase.initializeApp({
+  var config = {
     apiKey: "AIzaSyD6wOWvFNTYrwBS185opmS1J3VYEiu6Vwo",
     authDomain: "playground-iot.firebaseapp.com",
     databaseURL: "https://playground-iot.firebaseio.com",
     storageBucket: "playground-iot.appspot.com",
-  });
+  };
+  firebase.initializeApp(config);
+</script>
 
-  
-  // Checks for user authentication
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is already signed in
-      alert("logged in!");
-      user.providerData.forEach(function (profile) {
-        console.log("Sign-in provider: "+profile.providerId);
-        console.log("  Provider-specific UID: "+profile.uid);
-        console.log("  Name: "+profile.displayName);
-        console.log("  Email: "+profile.email);
-        console.log("  Photo URL: "+profile.photoURL);
-      });
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script> <!-- Ajax CDN-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>        <!-- Imports the Google Auuthentication SDK-->
+<script>
 
-    } else {
-      // No user is signed in
-      var provider = new firebase.auth.GoogleAuthProvider();    // Create an instance of the Google provider object
+  // ===========================================
+  // AUTHENTICATION
+  // From here on, it's all about authentication
+  // ===========================================
+
+  // Function called when clicking the Login/Logout button.
+  function toggleSignIn() {
+    if (!firebase.auth().currentUser) {
+      var provider = new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithRedirect(provider);
-    
-      firebase.auth().getRedirectResult().then(function(result) {
-        if (result.credential) {
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = result.credential.accessToken;
-        }
-        // The signed-in user info.
-        var user = result.user;
-
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
+    } else {
+      firebase.auth().signOut();
     }
-  });    
+    document.getElementById('sign-in-button').disabled = true;
+  }
 
+  // Main function
+  function initApp() {
+
+    // Gets the result from the authentication
+    firebase.auth().getRedirectResult().then(function(result) {
+      if (result.credential) {
+        var token = result.credential.accessToken;    // This gives you a Google Access Token. You can use it to access the Google API.
+      }
+      var user = result.user;                         // The signed-in user info.
+    });
+
+    // Event handler for every change on the auth state
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {     // When the user is logged in
+        document.getElementById('sign-in-button').textContent = 'Sign out';
+        $("#sign-in-button").removeClass('mdl-button--accent');
+        $("#sign-in-button").attr("style", "color: #000000");
+      } else {        // When the user is logged out
+        document.getElementById('sign-in-button').textContent = 'Sign in with Google';
+        $("#sign-in-button").addClass('mdl-button--accent');
+        $("#sign-in-button").attr("style", "color: #FFFFFF");
+      }
+      document.getElementById('sign-in-button').disabled = false;
+    });
+
+    document.getElementById('sign-in-button').addEventListener('click', toggleSignIn, false);
+  }
+
+  // Runs the main function ("initApp()")
+  window.onload = function() {
+    initApp();
+  };    
+
+
+  // ===========================================
+  // COMUNICATION WITH DATABASE
+  // Here is where the fun begins
+  // ===========================================
 
   var database = firebase.database().ref("arduino/");   // Creates a reference to the firebase database
+  var buttonState;
+
+  database.on("value", function(snapshot) {
+    buttonState = snapshot.val().button
+    if (buttonState == "on") {
+      $("#button").attr("style", "box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#button").text("BUTTON OFF");
+    } else {
+      $("#button").attr("style", "box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#button").text("BUTTON ON");
+    }
+
+  });
 
   // When button is clicked, changes firebase server
-  $('.mdl-button').click(function() {
-    database.set({"button": "on"});
+  $('#button').click(function() {
+    if (buttonState == "on") {
+      database.set({"button": "off"});
+    } else {
+      database.set({"button": "on"});
+    }
+
+    console.log(buttonState);
   });
 
 
