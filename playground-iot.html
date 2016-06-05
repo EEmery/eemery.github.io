@@ -48,7 +48,7 @@
       <div class="mdl-layout__header-row">
 
         <!-- Title -->
-        <span class="mdl-layout-title"></span>
+        <span class="mdl-layout-title">Room's Control</span>
           
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
@@ -64,7 +64,7 @@
     
     <!-- Sidebar navigation -->
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title"></span> 
+      <span class="mdl-layout-title">Room's Control</span> 
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="../index-br.html">Posts</a>
         <a class="mdl-navigation__link" href="../about/about-br.html">Sobre</a>
@@ -82,10 +82,17 @@
           Sign in with Google
         </button>
 
-        <!-- CHANGE SERVER BUTTON STATE -->
+        <!-- SERVER VALUES BUTTONS -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="button">
           BUTTON
         </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="lights">
+          LIGHTS
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="fan">
+          FAN
+        </button>
+
 
   <!-- END OF CONTENT -->
     </div>
@@ -144,7 +151,7 @@
  ********************************************************/
 
 /* Buttons */
-#button
+#button, #lights, #fan
 {
   color: #FFFFFF;
   margin: 3% 0% 0% 3%;
@@ -229,11 +236,11 @@
 
     // Event handler for every change on the auth state
     firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {     // When the user is logged in
+      if (user) {     // When the user is logged in, changes to sign out button
         document.getElementById('sign-in-button').textContent = 'Sign out';
         $("#sign-in-button").removeClass('mdl-button--accent');
         $("#sign-in-button").attr("style", "color: #000000");
-      } else {        // When the user is logged out
+      } else {        // When the user is logged out, changes to sign in button
         document.getElementById('sign-in-button').textContent = 'Sign in with Google';
         $("#sign-in-button").addClass('mdl-button--accent');
         $("#sign-in-button").attr("style", "color: #FFFFFF");
@@ -251,34 +258,71 @@
 
 
   // ===========================================
-  // COMUNICATION WITH DATABASE
-  // Here is where the fun begins
+  // CHANGING WEBSITE USER INTERFACE
   // ===========================================
 
   var database = firebase.database().ref("arduino/");   // Creates a reference to the firebase database
-  var buttonState;
+  var database_snapshot;
 
   database.on("value", function(snapshot) {
-    buttonState = snapshot.val().button
-    if (buttonState == "on") {
-      $("#button").attr("style", "box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19)");
-      $("#button").text("BUTTON OFF");
-    } else {
+    database_snapshot = snapshot.val();
+
+    if (database_snapshot.button == "on") {
       $("#button").attr("style", "box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19)");
       $("#button").text("BUTTON ON");
+    } else {
+      $("#button").attr("style", "box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#button").text("BUTTON OFF");
+    }
+
+    if (database_snapshot.lights == "on") {
+      $("#lights").attr("style", "box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#lights").text("LIGHTS ON");
+    } else {
+      $("#lights").attr("style", "box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#lights").text("LIGHTS OFF");
+    }
+
+    if (database_snapshot.fan == "on") {
+      $("#fan").attr("style", "box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#fan").text("FAN ON");
+    } else {
+      $("#fan").attr("style", "box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19)");
+      $("#fan").text("FAN OFF");
     }
 
   });
 
+
+  // ===========================================
+  // COMUNICATION WITH DATABASE
+  // ===========================================
+
   // When button is clicked, changes firebase server
   $('#button').click(function() {
-    if (buttonState == "on") {
-      database.set({"button": "off"});
+    if (database_snapshot.button == "on") {
+      database.update({"button": "off"});
     } else {
-      database.set({"button": "on"});
+      database.update({"button": "on"});
     }
+  });
 
-    console.log(buttonState);
+  // When lights is clicked, changes firebase server
+  $('#lights').click(function() {
+    if (database_snapshot.lights == "on") {
+      database.update({"lights": "off"});
+    } else {
+      database.update({"lights": "on"});
+    }
+  });
+
+  // When fan is clicked, changes firebase server
+  $('#fan').click(function() {
+    if (database_snapshot.fan == "on") {
+      database.update({"fan": "off"});
+    } else {
+      database.update({"fan": "on"});
+    }
   });
 
 
