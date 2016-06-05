@@ -104,8 +104,7 @@
     storageBucket: "playground-iot.appspot.com",
   });
 
-  var provider = new firebase.auth.GoogleAuthProvider();    // Create an instance of the Google provider object
-
+  
   // Checks for user authentication
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -121,6 +120,7 @@
 
     } else {
       // No user is signed in
+      var provider = new firebase.auth.GoogleAuthProvider();    // Create an instance of the Google provider object
       firebase.auth().signInWithRedirect(provider);
     
       firebase.auth().getRedirectResult().then(function(result) {
