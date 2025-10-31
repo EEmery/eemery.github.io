@@ -1,5 +1,0 @@
-#! /bin/bash
-
-export PERSONAL_BLOG_HOME=$HOME/dev/personal/personal-blog
-
-source .venv/bin/activate

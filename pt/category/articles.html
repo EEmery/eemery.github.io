@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <title>Robos e Café - articles category</title>
     
     <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
 
@@ -14,9 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    {% assets filters="libsass", output="css/main.css", "scss/main.scss" %}
-    <link rel="stylesheet" href="/{{ ASSET_URL }}">
-    {% endassets %}
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
     
     <script>
         // Apply theme immediately to avoid flash
@@ -46,33 +44,11 @@
     <header class="main-header">
         <nav class="main-nav">
             <div class="nav-links">
-                {% for title, url in MENUITEMS %}
-                    {% if output_file and url in output_file %}
-                        <a href="/{{ url }}" class="nav-active">
-                            <span class="material-symbols-outlined">place_item</span>
-                        </a>
-                    {% else %}
-                        <a href="/{{ url }}">{{ title.upper() }}</a>
-                    {% endif %}
-                {% endfor %}
+                        <a href="/pt/logs.html">LOGS</a>
+                        <a href="/pt/pages/info.html">INFO</a>
             </div>
 
             <div class="nav-controls">
-                {% set current_page = article or page or self %}
-                {% if current_page.translations %}
-                    {% for translation in current_page.translations %}
-                        <a href="/{{ translation.url }}" class="lang-button">
-                            {% if translation.lang == 'pt' %}BR{% else %}{{ translation.lang.upper() }}{% endif %}
-                        </a>
-                    {% endfor %}
-                {% elif output_file and 'logs.html' in output_file %}
-                    {# Language switcher for logs page #}
-                    {% if DEFAULT_LANG == 'en' %}
-                        <a href="/pt/logs.html" class="lang-button">BR</a>
-                    {% else %}
-                        <a href="/logs.html" class="lang-button">EN</a>
-                    {% endif %}
-                {% endif %}
 
                 <button id="theme-toggle-btn" class="theme-icon">
                     <span class="material-symbols-outlined">light_mode</span>
@@ -82,11 +58,31 @@
     </header>
 
     <main class="content">
-        {% block content %}{% endblock %}
+    <section class="article-list">
+        <div class="page-header-top">
+            <span class="material-symbols-outlined page-icon">toast</span>
+            <h1>LOG ENTRIES</h1>
+        </div>
+        <ul>
+            <li class="article-item">
+                <a href="https://eemery.github.io/pt/test-page.html" class="article-link">
+                    <span class="material-symbols-outlined article-icon">sd_card</span>
+                    <div class="article-info">
+                    <time datetime="2025-10-30T14:30:00+00:00">
+                        2025-10-30 14-30
+                    </time>
+                        <span class="article-title">
+                            Página de teste em Português
+                        </span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
     </main>
 
     <!-- <footer class="main-footer">
-        <p>&copy; {{ SITENAME }}</p>
+        <p>&copy; Robos e Café</p>
     </footer> -->
 
 </body>

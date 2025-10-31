@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informação - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/logs.html">LOGS</a>
+                        <a href="/pt/pages/info.html">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/../pages/info.html" class="lang-button">
+EN                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+    <article class="page">
+        <header>
+            <div class="page-header-top">
+                <span class="material-symbols-outlined page-icon">keyboard_option_key</span>
+                <h1>INFORMAÇÃO</h1>
+            </div>
+        </header>
+        
+        <div class="page-content">
+            <p>Robôs e Café é um espaço digital que explora ideias em torno de ciência, tecnologia, cultura e educação. Aqui você vai encontrar textos sobre os mundos do faça-você-mesmo (DIY), eletrônica, código, web independente e uma série de aleatoriedades.</p>
+<p>Este website é apenas uma das casas do Robôs e Café.</p>
+<ul>
+<li><a href="https://robosecafe.substack.com/">Substack</a></li>
+<li><a href="https://www.youtube.com/@RobosECafe">YouTube</a></li>
+</ul>
+<p>Em Inglês</p>
+<ul>
+<li><a href="https://robotsandcoffeeco.substack.com/">Substack</a></li>
+<li><a href="https://www.youtube.com/@RobotsAndCoffeeCo">YouTube</a></li>
+<li><a href="https://www.instagram.com/RobotsAndCoffeeCo">Instagram</a></li>
+</ul>
+        </div>
+    </article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>

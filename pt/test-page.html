@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de teste em Português - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/logs.html">LOGS</a>
+                        <a href="/pt/pages/info.html">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/../test-page.html" class="lang-button">
+EN                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+    <article class="post">
+        <header>
+            <div class="post-header-top">
+                <span class="material-symbols-outlined post-icon">sim_card_download</span>
+                <div class="post-header-info">
+                    <div class="post-meta">
+                        <span class="meta-label">TYPE:</span>
+                        <span class="meta-value">LOG</span>
+                    </div>
+                    <time datetime="2025-10-30T14:30:00+00:00">
+                        <span class="meta-label">TIMESTAMP:</span>
+                        <span class="meta-value">2025-10-30 14-30</span>
+                    </time>
+                </div>
+            </div>
+            <h1>Página de teste em Português</h1>
+        </header>
+        
+        <div class="post-content">
+            <h2>Título de secção para Header 2 Type</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec odio pharetra, rhoncus leo quis, malesuada tellus. Aenean sapien risus, porta eu lacinia ut, rhoncus quis lorem. Integer posuere ullamcorper tempus. Fusce id leo a dui aliquet dignissim. Maecenas a mi ut augue dignissim pulvinar. Vestibulum aliquam, odio at varius dictum, libero tortor egestas est, vitae ornare nunc ex eget odio. Proin id sapien eget magna viverra posuere ac eget velit. Donec iaculis tincidunt dictum. Duis vel mauris metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas scelerisque posuere lorem ac molestie. Fusce eget est sed sem mattis aliquam.</p>
+<p>Suspendisse potenti. Nunc maximus mattis nibh, luctus ullamcorper ligula blandit at. Phasellus eget enim maximus, vulputate elit vitae, vehicula dui. Morbi lobortis a eros in euismod. Fusce ornare tellus ante, in condimentum lorem consectetur id. Nulla at turpis pharetra, ultricies lacus vel, lobortis est. Nunc laoreet sem vel egestas tincidunt. Etiam felis nibh, ullamcorper eget varius non, ullamcorper at enim.</p>
+<p>Etiam non imperdiet nisi. Sed vel tellus non odio iaculis porttitor. Etiam laoreet maximus ullamcorper. Praesent maximus diam eget lorem pretium, sit amet porta velit venenatis. Ut bibendum at justo ut finibus. Sed eget lorem sit amet eros commodo pharetra sed id turpis. Vivamus at congue sapien.</p>
+<p>Vestibulum nisl nisi, malesuada eu gravida ac, cursus a odio. Etiam dictum odio vel magna ultrices, in convallis libero dignissim. Mauris vel pharetra neque, eu varius purus. Cras posuere consequat eleifend. Vivamus non dui dolor. Aliquam efficitur tellus metus, vel placerat enim ornare ac. Vestibulum at ornare metus. Vivamus tellus leo, lacinia quis est eget, tempus suscipit nisi. Donec vulputate orci non ipsum porttitor, cursus ornare ipsum molestie. Nunc sed felis eleifend, ultricies mauris id, sagittis diam.</p>
+<h3>Título de secção para Header 3 Type</h3>
+<p>Vivamus auctor aliquam lectus, finibus volutpat ante ultricies id. In interdum tellus ut luctus fermentum. Donec at laoreet est. Etiam finibus, dui eget dignissim tincidunt, elit diam maximus lectus, eu ultrices massa orci tristique risus. Sed augue lorem, vehicula non ex in, facilisis aliquet enim. Maecenas et nulla efficitur lacus ullamcorper accumsan sed at lorem. Fusce sit amet dolor magna. Nunc ultricies vel diam vitae gravida. Mauris sapien felis, venenatis at suscipit vitae, eleifend facilisis magna. Suspendisse et feugiat urna. Pellentesque tincidunt nibh eget turpis sodales pharetra. Vestibulum a scelerisque nulla. Curabitur velit urna, molestie non tellus vitae, convallis auctor ex. Sed at arcu ligula.</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="n">dropRight</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="n">const</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="k">array</span><span class="p">.</span><span class="n">length</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">toInteger</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">slice</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">[]</span>
+<span class="err">}</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">castArray</span><span class="p">(...</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">!</span><span class="n">args</span><span class="p">.</span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span>
+<span class="w">  </span><span class="err">}</span>
+<span class="w">  </span><span class="n">const</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="n">0</span><span class="o">]</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">Array</span><span class="p">.</span><span class="n">isArray</span><span class="p">(</span><span class="k">value</span><span class="p">)</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">value</span><span class="o">]</span>
+<span class="err">}</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">chunk</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="k">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="nf">max</span><span class="p">(</span><span class="n">toInteger</span><span class="p">(</span><span class="k">size</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="n">const</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="k">array</span><span class="p">.</span><span class="n">length</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">!</span><span class="n">length</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span>
+<span class="w">  </span><span class="err">}</span>
+<span class="w">  </span><span class="n">let</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="n">let</span><span class="w"> </span><span class="n">resIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="n">const</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">Array</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">size</span><span class="p">))</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="k">result</span><span class="o">[</span><span class="n">resIndex++</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slice</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">size</span><span class="p">))</span>
+<span class="w">  </span><span class="err">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">result</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<p>Suspendisse potenti. Nunc maximus mattis nibh, luctus ullamcorper ligula blandit at. Phasellus eget enim maximus, vulputate elit vitae, vehicula dui. Morbi lobortis a eros in euismod. Fusce ornare tellus ante, in condimentum lorem consectetur id. Nulla at turpis pharetra, ultricies lacus vel, lobortis est. Nunc laoreet sem vel egestas tincidunt. Etiam felis nibh, ullamcorper eget varius non, ullamcorper at enim.</p>
+<blockquote>
+<p>This is a quote text for testing purposes.</p>
+</blockquote>
+<p>Vivamus auctor aliquam lectus, finibus volutpat ante ultricies id. In interdum tellus ut luctus fermentum. Donec at laoreet est. Etiam finibus, dui eget dignissim tincidunt, elit diam maximus lectus, eu ultrices massa orci tristique risus.</p>
+<h4>Título de secção para Header 4 Type - with <strong>bold</strong> test</h4>
+<p>Etiam non imperdiet nisi. Sed vel tellus non odio iaculis <strong>with bold text test</strong> porttitor. Etiam laoreet maximus ullamcorper. Praesent maximus diam eget lorem pretium, sit amet porta velit venenatis. Ut bibendum at justo ut finibus. Sed eget lorem sit amet eros commodo pharetra sed id turpis. Vivamus at congue sapien.</p>
+<h5>Título de secção para Header 5 Type - with <em>italics</em> test</h5>
+<p>Vestibulum nisl nisi, malesuada eu gravida ac, cursus <em>with italics text test</em> a odio. Etiam dictum odio vel magna ultrices, in convallis libero dignissim. Mauris vel pharetra neque, eu varius purus. Cras posuere consequat eleifend. Vivamus non dui dolor. Aliquam efficitur tellus metus, vel placerat enim ornare ac. Vestibulum at ornare metus. Vivamus tellus leo, lacinia quis est eget, tempus suscipit nisi. Donec vulputate orci non ipsum porttitor, cursus ornare ipsum molestie. Nunc sed felis eleifend, ultricies mauris id, sagittis diam.</p>
+<h6>Título de secção para Header 6 Type - with <code>inline code</code> test</h6>
+<p>Suspendisse potenti. Nunc maximus mattis nibh, luctus ullamcorper ligula <code>with inline code block test</code> blandit at. Phasellus eget enim maximus, vulputate elit vitae, vehicula dui. Morbi lobortis a eros in euismod. Fusce ornare tellus ante, in condimentum lorem consectetur id. Nulla at turpis pharetra, ultricies lacus vel, lobortis est. Nunc laoreet sem vel egestas tincidunt. Etiam felis nibh, ullamcorper eget varius non, ullamcorper at enim.</p>
+        </div>
+        
+        <footer class="post-footer">
+            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+        </footer>
+    </article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>
