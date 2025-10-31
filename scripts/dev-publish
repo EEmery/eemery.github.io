@@ -1,0 +1,4 @@
+#! /bin/bash
+
+python3 -m pelican content -s publishconf.py
+ghp-import -b source output
