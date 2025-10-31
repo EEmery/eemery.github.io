@@ -65,12 +65,12 @@
                             {% if translation.lang == 'pt' %}BR{% else %}{{ translation.lang.upper() }}{% endif %}
                         </a>
                     {% endfor %}
-                {% elif output_file and 'logs.html' in output_file %}
+                {% elif output_file and 'index.html' in output_file %}
                     {# Language switcher for logs page #}
                     {% if DEFAULT_LANG == 'en' %}
-                        <a href="/pt/logs.html" class="lang-button">BR</a>
+                        <a href="/pt/index.html" class="lang-button">BR</a>
                     {% else %}
-                        <a href="/logs.html" class="lang-button">EN</a>
+                        <a href="/index.html" class="lang-button">EN</a>
                     {% endif %}
                 {% endif %}
 

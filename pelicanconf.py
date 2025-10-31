@@ -30,7 +30,7 @@ I18N_SUBSITES = {
         "SITENAME": "Robos e Café",
         "DEFAULT_LANG": "pt",
         "MENUITEMS": (
-            ("Logs", "pt/logs.html"),
+            ("Logs", "pt/index.html"),
             ("Info", "pt/pages/info.html"),
         ),
     }
@@ -39,14 +39,14 @@ I18N_SUBSITES = {
 # --- Page & Menu Setup ---
 # 1. "Logs" page (list of all articles)
 DIRECT_TEMPLATES = ["index"]
-INDEX_SAVE_AS = "logs.html" # Save the article list as logs.html
+INDEX_SAVE_AS = "index.html" # Save the article list as index.html (root page)
 PAGINATED_TEMPLATES = {"index": None}
 
 # 2. "Info" page (and top menu)
 DISPLAY_PAGES_ON_MENU = False # We want a custom menu
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    ("Logs", "logs.html"),
+    ("Logs", "index.html"),
     ("Info", "pages/info.html"),
 )
 
