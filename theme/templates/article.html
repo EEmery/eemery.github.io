@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <div class="post-header-top">
+                <span class="material-symbols-outlined post-icon">sim_card_download</span>
+                <div class="post-header-info">
+                    <div class="post-meta">
+                        <span class="meta-label">TYPE:</span>
+                        <span class="meta-value">LOG</span>
+                    </div>
+                    <time datetime="{{ article.date.isoformat() }}">
+                        <span class="meta-label">TIMESTAMP:</span>
+                        <span class="meta-value">{{ article.date.strftime('%Y-%m-%d %H-%M') }}</span>
+                    </time>
+                </div>
+            </div>
+            <h1>{{ article.title }}</h1>
+        </header>
+        
+        <div class="post-content">
+            {{ article.content }}
+        </div>
+        
+        <footer class="post-footer">
+            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+        </footer>
+    </article>
+{% endblock %}

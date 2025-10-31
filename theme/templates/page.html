@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title.title() }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+    <article class="page">
+        <header>
+            <div class="page-header-top">
+                <span class="material-symbols-outlined page-icon">{{ page.icon|default('description') }}</span>
+                <h1>{{ page.title }}</h1>
+            </div>
+        </header>
+        
+        <div class="page-content">
+            {{ page.content }}
+        </div>
+    </article>
+{% endblock %}

@@ -1,0 +1,6 @@
+pelican
+markdown
+pelican-webassets
+webassets
+libsass
+pelican-i18n-subsites

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    {% assets filters="libsass", output="css/main.css", "scss/main.scss" %}
+    <link rel="stylesheet" href="/{{ ASSET_URL }}">
+    {% endassets %}
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                {% for title, url in MENUITEMS %}
+                    {% if output_file and url in output_file %}
+                        <a href="/{{ url }}" class="nav-active">
+                            <span class="material-symbols-outlined">place_item</span>
+                        </a>
+                    {% else %}
+                        <a href="/{{ url }}">{{ title.upper() }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="nav-controls">
+                {% set current_page = article or page or self %}
+                {% if current_page.translations %}
+                    {% for translation in current_page.translations %}
+                        <a href="/{{ translation.url }}" class="lang-button">
+                            {% if translation.lang == 'pt' %}BR{% else %}{{ translation.lang.upper() }}{% endif %}
+                        </a>
+                    {% endfor %}
+                {% elif output_file and 'logs.html' in output_file %}
+                    {# Language switcher for logs page #}
+                    {% if DEFAULT_LANG == 'en' %}
+                        <a href="/pt/logs.html" class="lang-button">BR</a>
+                    {% else %}
+                        <a href="/logs.html" class="lang-button">EN</a>
+                    {% endif %}
+                {% endif %}
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; {{ SITENAME }}</p>
+    </footer> -->
+
+</body>
+</html>
