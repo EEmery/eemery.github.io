@@ -44,9 +44,12 @@ I18N_SUBSITES = {
 
 # --- Page & Menu Setup ---
 # 1. "Logs" page (list of all articles)
-DIRECT_TEMPLATES = ["index"]
+DIRECT_TEMPLATES = ["index", "404"]
 INDEX_SAVE_AS = "index.html" # Save the article list as index.html (root page)
 PAGINATED_TEMPLATES = {"index": None}
+
+# 404 page (GitHub Pages will automatically use this)
+TEMPLATE_PAGES = {"404.html": "404.html"}
 
 # 2. "Info" page (and top menu)
 DISPLAY_PAGES_ON_MENU = False # We want a custom menu
