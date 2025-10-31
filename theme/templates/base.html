@@ -47,7 +47,8 @@
         <nav class="main-nav">
             <div class="nav-links">
                 {% for title, url in MENUITEMS %}
-                    {% if output_file and url in output_file %}
+                    {% set normalized_url = url.replace(DEFAULT_LANG + "/", "") if DEFAULT_LANG != "en" else url %}
+                    {% if output_file and ((normalized_url == "" and output_file == "index.html") or (normalized_url != "" and normalized_url in output_file)) %}
                         <a href="/{{ url }}" class="nav-active">
                             <span class="material-symbols-outlined">place_item</span>
                         </a>
@@ -68,9 +69,9 @@
                 {% elif output_file and 'index.html' in output_file %}
                     {# Language switcher for logs page #}
                     {% if DEFAULT_LANG == 'en' %}
-                        <a href="/pt/index.html" class="lang-button">BR</a>
+                        <a href="/pt/" class="lang-button">BR</a>
                     {% else %}
-                        <a href="/index.html" class="lang-button">EN</a>
+                        <a href="/" class="lang-button">EN</a>
                     {% endif %}
                 {% endif %}
 

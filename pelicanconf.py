@@ -13,6 +13,12 @@ PATH = "content"
 ARTICLE_PATHS = ["articles"]
 PAGE_PATHS = ["pages"]
 
+# Pretty URLs (remove .html extension)
+ARTICLE_URL = "{slug}/"
+ARTICLE_SAVE_AS = "{slug}/index.html"
+PAGE_URL = "pages/{slug}/"
+PAGE_SAVE_AS = "pages/{slug}/index.html"
+
 # Ignore hidden files and IDE directories
 IGNORE_FILES = ['.#*', '__pycache__', '*.pyc', '*~', '.*']
 
@@ -30,8 +36,8 @@ I18N_SUBSITES = {
         "SITENAME": "Robos e Café",
         "DEFAULT_LANG": "pt",
         "MENUITEMS": (
-            ("Logs", "pt/index.html"),
-            ("Info", "pt/pages/info.html"),
+            ("Logs", "pt/"),
+            ("Info", "pt/pages/info/"),
         ),
     }
 }
@@ -46,8 +52,8 @@ PAGINATED_TEMPLATES = {"index": None}
 DISPLAY_PAGES_ON_MENU = False # We want a custom menu
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    ("Logs", "index.html"),
-    ("Info", "pages/info.html"),
+    ("Logs", ""),
+    ("Info", "pages/info/"),
 )
 
 # 3. No Author Pages
