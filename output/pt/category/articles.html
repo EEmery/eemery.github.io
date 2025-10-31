@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robos e Café - articles category</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/logs.html">LOGS</a>
+                        <a href="/pt/pages/info.html">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+    <section class="article-list">
+        <div class="page-header-top">
+            <span class="material-symbols-outlined page-icon">toast</span>
+            <h1>LOG ENTRIES</h1>
+        </div>
+        <ul>
+            <li class="article-item">
+                <a href="https://eemery.github.io/pt/test-page.html" class="article-link">
+                    <span class="material-symbols-outlined article-icon">sd_card</span>
+                    <div class="article-info">
+                    <time datetime="2025-10-30T14:30:00+00:00">
+                        2025-10-30 14-30
+                    </time>
+                        <span class="article-title">
+                            Página de teste em Português
+                        </span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>
