@@ -25,9 +25,10 @@ IGNORE_FILES = ['.#*', '__pycache__', '*.pyc', '*~', '.*']
 # Tell Pelican to use your custom theme
 THEME = "theme"
 
+PLUGINS = ["i18n_subsites", "webassets"] # Enable plugins
+
 # --- Language & Translation (i18n) ---
 DEFAULT_LANG = "en"
-PLUGINS = ["i18n_subsites", "webassets"] # Enable plugins
 JINJA_ENVIRONMENT = {}
 I18N_TEMPLATES_LANG = "en" # Default language for templates
 
@@ -39,6 +40,7 @@ I18N_SUBSITES = {
             ("Logs", "pt/"),
             ("Info", "pt/pages/info/"),
         ),
+        "STATIC_PATHS": [],  # Don't duplicate static files in pt/
     }
 }
 
@@ -65,7 +67,15 @@ AUTHORS_SAVE_AS = ""
 
 # --- Static Files Configuration ---
 # Copy static files (js, images, etc.) to output
-STATIC_PATHS = ['static']
+STATIC_PATHS = ["static", "images"]
+
+# Keep images at root level, not inside language subdirectories
+STATIC_EXCLUDE_SOURCES = False
+STATIC_CREATE_LINKS = False
+STATIC_CHECK_IF_MODIFIED = False
+
+# Images should be referenced from root for all languages
+# Use: ![alt text](/images/photo.png) in markdown
 
 # --- Webassets Configuration ---
 WEBASSETS_SOURCE_PATHS = ['static']
