@@ -22,7 +22,7 @@ Fiz alguns desenhos conceituais da direção que acho que poderia ser interessan
 
 A direção mais importante que vejo nesse conceito é reduzir ao máximo a quantidade de torres que a estação terá. Se possível, queria ter apenas uma, o que requer que essa torre seja oca pra que os fios e tubos dos sensores passassem por dentro dela.
 
-![Section view of the tower]({static}/images/Pasted%20image%2020251101161110.png)
+![Vista seccionada da torre]({static}/images/Pasted image 20251101171911.png)
 
 Esse design, contanto, vai depender de como vou desenvolver os sensores. Eles que vão definir as limitações que terei que acomodar no design final, por isso, vamos começar esse projeto explorando ideias para cada um dos sensores.
 
