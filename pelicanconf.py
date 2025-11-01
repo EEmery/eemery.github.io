@@ -66,8 +66,8 @@ AUTHOR_SAVE_AS = ""  # Disables generating author pages
 AUTHORS_SAVE_AS = ""
 
 # --- Static Files Configuration ---
-# Copy static files (js, images, etc.) to output
-STATIC_PATHS = ["static", "images"]
+# Copy static files (js, images, videos, etc.) to output
+STATIC_PATHS = ["static", "images", "videos"]
 
 # Keep images at root level, not inside language subdirectories
 STATIC_EXCLUDE_SOURCES = False
