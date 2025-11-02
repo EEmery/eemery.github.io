@@ -67,12 +67,17 @@ AUTHORS_SAVE_AS = ""
 
 # --- Static Files Configuration ---
 # Copy static files (js, images, videos, etc.) to output
-STATIC_PATHS = ["static", "images", "videos"]
+STATIC_PATHS = ["static", "images", "videos", "extra/CNAME"]
 
 # Keep images at root level, not inside language subdirectories
 STATIC_EXCLUDE_SOURCES = False
 STATIC_CREATE_LINKS = False
 STATIC_CHECK_IF_MODIFIED = False
+
+# Copy CNAME file to root for custom domain
+EXTRA_PATH_METADATA = {
+    "extra/CNAME": {"path": "CNAME"},
+}
 
 # Images should be referenced from root for all languages
 # Use: ![alt text](/images/photo.png) in markdown
