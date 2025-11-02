@@ -24,6 +24,23 @@ Manually move the `.mp4` file to the `content/videos/` folder. Then, in the arti
 
 The video will keep playing in repeat similar to a gif. Obsidian will not be able to render that in the editor, so the code will disappear when the cursor is not on top of it. If that is annoying, you can temporarily add code style to it and remove latter, so that pelican can render the HTML.
 
+### Attaching YouTube Videos
+
+Paste the code bellow in the article and replace the video URL with the one YouTube generates when selecting `share > embed` – this is different than the plain video URL.
+
+```
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+</div>
+```
+
 ## To Do's
 
 - [ ] Find a better way to attach images that work in both Pelican and Obsidian

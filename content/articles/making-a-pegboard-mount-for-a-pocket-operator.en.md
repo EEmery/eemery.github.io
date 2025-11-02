@@ -1,37 +1,37 @@
-Title: Criando um Suporte de Pegboard para um Pocket Operator
+Title: Making a Pegboard Mount for a Pocket Operator
 Date: 2025-02-07 16:00
-Lang: pt
+Lang: en
 Slug: making-a-pegboard-mount-for-a-pocket-operator
 Translation: true
 
-Uma das melhores coisas que já comprei pra organizar meu apartamento foi uma pegboard de mesa que achei na IKEA (a série SKÅDIS). Além de não ter que furar as paredes, a possibilidade de mover de uma mesa pra outra, ou guardar dentro de um armário quando você quer fingir que é uma pessoa normal pra as visitas, é muito útil. Coloquei nela as coisas que uso com maior frequência e que acabam sempre ficando espalhadas pela mesa: paquímetro, régua, caderno, lápis e canetas, post-its, tesoura etc. A ideia é ter fácil acesso a esses itens sem que eles fiquem o tempo inteiro ocupando o pouco espaço que tenho na mesa de trabalho.
+One of the best things I've ever bought to organize my apartment was a desktop pegboard I found at IKEA (the SKÅDIS series). In addition to not having to drill holes in the walls, the ability to move it from one table to another, or store it in a closet when you want to pretend to be a normal person for guests, is very useful. I put the things I use most often and that always end up scattered around the table: calipers, rulers, notebooks, pencils and pens, post-its, scissors, etc. The idea is to have easy access to these items without them constantly taking up the little space I have on my work desk.
 
-![Uma IKEA SKADIS em uma mesa]({static}/images/Pasted%20image%2020251102021735.png)
+![An IKEA SKADIS on a table]({static}/images/Pasted%20image%2020251102021735.png)
 
-Um dos ítens que quero colocar na pegboard é o meu Pocket Operator: um dispositivozinho maravilhoso que te ajuda a rascunhar e experimentar com músicas. Apesar de ser apaixonado por ele, uso com menos frequência do que gostaria, por isso pensei em colocá-lo por lá, pra que ele fique sempre fácil de acessar, me lembrando da sua existência sempre que for pegar um lápis ou uma tesoura.
+One of the items I want to put on the pegboard is my Pocket Operator: a wonderful little device that helps you sketch and experiment with music. Even though I love it, I use it less often than I would like, so I thought I would put it there, so that it would always be easy to access, reminding me of its existence whenever I need to grab a pencil or a pair of scissors.
 
-![O Pocket Operator Knock-Out]({static}/images/Pasted%20image%2020251102021801.png)
+![A Pocket Operator Knock-Out]({static}/images/Pasted%20image%2020251102021801.png)
 
-Apesar do Pocket Operator já ter um encaixe pra pendurar num ganchinho, eu não queria arriscar quebrar essa parte por acidente (até por que ela é opcionalmente destacável) nem queria deixar ele tão exposto na pegboard, correndo risco de receber umas pancadas na hora que eu for tirar ou por alguma outra ferramenta perto dele. O problema na verdade é que eu sou muito *fresco* com esse negócio. Acho o design desse dispositivo genial: uma placa de circuito exposta com os componentes soldados diretamente nela. Isso me passa uma sensação de algo experimental, meio inacabado, que me incentiva a começar a fazer coisas sem necessariamente precisar terminar ou alcançar um objetivo claro: o fazer por fazer. O problema é que ele também me passa a sensação de algo super frágil, por isso toda a minha frescura pra pendurar ele na pegboard.
+Although the Pocket Operator already has a hook to hang it on, I didn't want to risk breaking this part by accident (especially since it is optionally detachable) nor did I want to leave it so exposed on the pegboard, running the risk of getting hit when I try to take it out or put some other tool near it. The problem is that I'm really *picky* about this thing. I think the design of this device is brilliant: an exposed circuit board with the components soldered directly onto it. It gives me a feeling of something experimental, kind of unfinished, which encourages me to start doing things without necessarily needing to finish or achieve a clear goal: doing things for the sake of doing them. The problem is that it also gives me the feeling of something super fragile, which is why I'm so picky about hanging it on the pegboard.
 
-Decidi então fazer algo que o protegesse melhor, mas sem visualmente ofuscá-lo, pra que sempre que olhasse para a pegboard, pudesse vê-lo por lá. Cheguei a ideia de uma caixinha simples, feita na impressora 3D. Ela teria a frente transparente e seria aberta no topo pra facilitar tirar e pôr o dispositivo.
+I then decided to make something that would protect it better, but without visually obscuring it, so that whenever I looked at the pegboard, I could see it there. I came up with the idea of ​​a simple box, made on a 3D printer. It would have a transparent front and would be open at the top to make it easier to take the device out and put it in.
 
-![Desenho conceitual do suporte do pocket operator]({static}/images/Pasted%20image%2020251102022906.png)
+![A concept of the pocket operator holder]({static}/images/Pasted%20image%2020251102021947.png)
 
-Comecei modelando a parte que seria impressa em 3D. Fiz em duas partes para evitar o uso de muitos suportes durante a impressão. A peça de trás possui dois ganchinhos que se encaixam na pegboard da IKEA pra prender por lá e manter a estabilidade. A impressão acabou ficando super fácil, sem muita complexidade na estrutura.
+I started by modeling the part that would be 3D printed. I made it in two parts to avoid using too many supports during printing. The back piece has two hooks that fit into the IKEA pegboard to hold it there and maintain stability. Printing ended up being super easy, without much complexity in the structure.
 
-![As partes impressas em 3D do suporte]({static}/images/Pasted%20image%2020251102022011.png)
+![The 3D printed parts of the holder]({static}/images/Pasted%20image%2020251102022011.png)
 
-Pra fazer a parte transparente da frente, usei um pedaço do plástico de uma embalagem de Sushi que tinha comido no almoço (e viva os três R's da reciclagem: reduzir, reutilizar e ruir o capitalismo). Caso alguém queira fazer algo parecido e não tenha acesso a uma folha de plástico pra reutilizar, vale buscar por lugares que vendem folhas finas de acrílico ou de acetato.
+To make the transparent part of the front, I used a piece of plastic from a sushi container that I had eaten for lunch (and long live the three R's of recycling: reduce, reuse and ruin the structures of capitalism). If anyone wants to make something similar and doesn't have access to a sheet of plastic to reuse, it's worth looking for places that sell thin sheets of acrylic or acetate.
 
-![Uma régua transparente, um retângulo de plástico transparente e uma faca de hobby]({static}/images/Pasted%20image%2020251102022038.png)
+![A transparent ruler, a plastic rectangle and a hobby knife]({static}/images/Pasted%20image%2020251102022038.png)
 
-Foi um saco cortar esse negócio pro tamanho certo. Usei um desses estiletes tipo "hobby knife/exacto knife" e uma régua simples, que ficava escorregando o tempo inteiro no plástico. Fazer um corte reto o suficiente foi um trabalho hercúleo. Mas no fim das contas a precisão não era um objetivo, com exceção da parte de cima, as extremidades do plástico ficam escondidas por trás da borda da peça feita na impressora.
+It was a pain to cut this thing to the right size. I used one of those hobby knife/exacto knife and a simple ruler, which kept slipping on the plastic all the time. Making a straight enough cut was a herculean task. But in the end, precision was not an objective, except for the top part, the ends of the plastic are hidden behind the edge of the piece made in the 3D printer.
 
-Adicionei uma camada de EVA na parte interna da caixa que foi impressa. Isso ajudou a tirar o barulho chato que qualquer coisa faz quando passa ortogonalmente pelas camadas da impressão 3D.
+I added a layer of EVA on the inside of the box that was printed. This helped to eliminate the annoying noise that anything makes when it passes orthogonally through the layers of the 3D print.
 
-![EVA coladas nas peças feitas na impressora 3D]({static}/images/Pasted%20image%2020251102022057.png)
+![The 3D printed parts padded with EVA foam]({static}/images/Pasted%20image%2020251102022057.png)
 
-Colei tudo com super cola e *tcharam*. Agora eu posso guardar meu Pocket Operator atendendo a todas as frescuras que criei na minha cabeça e provavelmente só existem por lá.
+I glued everything together with super glue and *tah-dah*. Now I can store my Pocket Operator fulfilling all the picky requirements that I've created in my own head and probably only exist there.
 
-![O pocket operator no suporte preso na IKEA SKADIS]({static}/images/Pasted%20image%2020251102022116.png)
+![The pocket operator on the holder fixed to the IKEA SKADIS]({static}/images/Pasted%20image%2020251102022116.png)
