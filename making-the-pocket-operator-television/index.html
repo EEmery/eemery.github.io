@@ -117,7 +117,7 @@ BR                        </a>
 <li>5x <code>100k</code> <code>1 ohm</code> resistors, 1x <code>470 ohm</code> resistor and 1x <code>1000uF</code> capacitor – these will be used throughout the circuit, more details below</li>
 </ul>
 <h3>The circuit</h3>
-<p><img alt="Circuit diagram" src="https://eemery.github.io/images/Pasted image 20251102024634.png"></p>
+<p><img alt="Circuit diagram" src="https://robotsandcoffee.co/images/Pasted image 20251102024634.png"></p>
 <h4>Notes on reading the audio input signal</h4>
 <p>We want to listen to two signals coming from the line-in of the device: the PO-Sync signal and the audio signal itself. We will pass both of these through a voltage divider (the <code>r1</code> resistors) rather than reading directly from the source. Since the voltage division is done in half, we don't need to use <code>100k</code> ohms resistors specifically, you can use any value as long as they are the same.</p>
 <h4>Notes on connecting the animation switch button</h4>
@@ -126,12 +126,12 @@ BR                        </a>
 <p>Between the audio input and output, there is a switch that allows you to switch between <code>SY5</code> mode, which passes the PO-Sync clock signal through to other devices that can be daisy-chained, and <code>SY4</code> mode, which copies the audio signal to both inputs and allows you to listen to the sound through a speaker or headphones in the line-out.</p>
 <h4>Notes on connecting the LED matrix display</h4>
 <p>I connected the LED matrix display as recommended by the <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/basic-connections">Adafruit team in the NeoPixel guide</a>. You can learn more about how to use them properly there, especially if you want to modify your pocket operator television to work with different displays or LED strips.</p>
-<p><img alt="A perfurated board with the circuit components" src="https://eemery.github.io/images/Pasted image 20251102025050.png"></p>
+<p><img alt="A perfurated board with the circuit components" src="https://robotsandcoffee.co/images/Pasted image 20251102025050.png"></p>
 <h2>Hardware</h2>
 <p>To put it all together, after prototyping on a breadboard, I found a black and gold circuit board that was the closest thing I could find to a pocket operator. I wanted the final device to look as much like a pocket operator as possible. I soldered all of the electronic components mentioned above, following the circuit diagram.</p>
 <p>The 3D printed case is very simple. It is meant to hold the display, circuit board, and animation toggle button together. The LED matrix display I purchased came with a JST cable soldered to it, so I used that to connect to the board. For consistency, I also used a JST cable to connect the animation toggle button to the circuit board. The main case and back cover can be joined together using M2 screws and nuts.</p>
 <p>You can find the 3D models I used in the <code>.stl</code> files <a href="https://github.com/EEmery/po-television/tree/main/models">in the <code>models</code> folder</a>. Feel free to modify them to better suit your needs, as you may need to change them to fit your circuit board and display if they don't have the same dimensions as mine.</p>
-<p><img alt="The pocket operator television built" src="https://eemery.github.io/images/Pasted image 20251102025146.png"></p>
+<p><img alt="The pocket operator television built" src="https://robotsandcoffee.co/images/Pasted image 20251102025146.png"></p>
 <h3>Adding colors in 3D printing</h3>
 <p>If you have a printer that supports multi-filaments, this step is much easier. Adding some colors in 3D printing will make the pocket operator television look closer to the pocket operator's aesthetic: parts in gold and others in some accent color.</p>
 <p>In 3D printing, I added texts and made a small extrusion in them to create a valley, about 0.5 millimeters. Then I came with a brush with acrylic paint in the color I wanted and put the paint inside this small valley. Right after, I passed some paper to clean up any dirt on the outside, leaving only the paint that was stuck inside the text valleys. After two or three layers, the result was reasonable.</p>

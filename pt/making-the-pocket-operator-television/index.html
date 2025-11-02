@@ -117,7 +117,7 @@ EN                        </a>
 <li>5x <code>100k</code> resistores de <code>1 ohms</code>, 1 resistor de <code>470 ohms</code> e 1 capacitor de <code>1000 uF</code> – serão usados ​​em todo o circuito, mais detalhes abaixo</li>
 </ul>
 <h3>O circuito</h3>
-<p><img alt="Diagrama do circuito" src="https://eemery.github.io/pt/images/Pasted image 20251102024634.png"></p>
+<p><img alt="Diagrama do circuito" src="https://robotsandcoffee.co/pt/images/Pasted image 20251102024634.png"></p>
 <h4>Notas sobre a leitura do sinal de entrada de áudio</h4>
 <p>Queremos ouvir dois sinais vindos da entrada de áudio do dispositivo: o sinal PO-Sync e o sinal de áudio em si. Passaremos ambos por um divisor de tensão (os resistores <code>r1</code>) em vez de ler diretamente da fonte. Como a divisão de tensão é feita pela metade, não precisamos usar resistores de <code>100k</code> ohms especificamente, você pode usar qualquer valor, desde que sejam iguais.</p>
 <h4>Notas sobre a conexão do botão de troca da animação</h4>
@@ -126,12 +126,12 @@ EN                        </a>
 <p>Entre a entrada e saída de áudio, existe um interruptor que permite a troca entre o modo <code>SY5</code>, que repassa o sinal de clock do PO-Sync para que outros dispositivos sejam conectados em cadeia, e o modo <code>SY4</code>, que copia o sinal de áudio para as duas entradas e permite ouvir o som produzido em um alto falante ou um fone de ouvido.</p>
 <h4>Notas sobre como ligar o display de matriz de LED</h4>
 <p>Eu conectei o display de matriz de LED conforme recomendado pela equipe da Adafruit no guia do NeoPixel. Você pode aprender mais sobre como usá-los corretamente por lá, especialmente se você quiser modificar seu pocket operator television para funcionar com diferentes displays ou tiras de LED.</p>
-<p><img alt="Placa perfurada com os componentes do circuito" src="https://eemery.github.io/pt/images/Pasted image 20251102025050.png"></p>
+<p><img alt="Placa perfurada com os componentes do circuito" src="https://robotsandcoffee.co/pt/images/Pasted image 20251102025050.png"></p>
 <h2>Hardware</h2>
 <p>Para juntar tudo, depois de prototipar em uma breadboard, encontrei uma placa de circuito preta e dourada que era a coisa mais próxima que consegui encontrar de um pocket operator. Eu queria que o dispositivo final se parecesse o máximo possível com um pocket operator. Soldei todos os componentes eletrônicos mencionados anteriormente, seguindo o diagrama do circuito.</p>
 <p>A case impressa em 3D é muito simples. Ela tem como objetivo manter o display, a placa de circuito e o botão de troca de animação juntos. O display de matriz de LED que comprei veio com um cabo JST soldado a ele, então o usei para conectar à placa. Para manter a consistência, também usei um cabo JST para conectar o botão de troca de animação à placa de circuito. A case principal e o cap traseiro podem ser juntados usando parafusos e porcas M2.</p>
 <p>Você pode encontrar os modelos 3D que usei nos arquivos <code>.stl</code> <a href="https://github.com/EEmery/po-television/tree/main/models">na pasta <code>models</code></a>. Sinta-se à vontade para modificá-los para melhor atendê-lo, já que pode ser necessário alterá-lo para caber na sua placa de circuito e display, caso eles não tenham as mesmas dimensões que os meus.</p>
-<p><img alt="O pocket operator television construído" src="https://eemery.github.io/pt/images/Pasted image 20251102025146.png"></p>
+<p><img alt="O pocket operator television construído" src="https://robotsandcoffee.co/pt/images/Pasted image 20251102025146.png"></p>
 <h3>Adicionando cores na impressão 3D</h3>
 <p>Se você tem uma impressora com suporte a multi-filamentos, essa etapa fica bem mais fácil. Adicionar algumas cores na impressão 3D vai fazer o pocket operator television ficar mais próximo da estética do pocket operator: partes em dourado e outras em alguma cor de destaque.</p>
 <p>Na impressão 3D, eu adicionei textos e fiz uma pequena extrusão neles pra criar um vale, coisa de 0.5 milimetro. Daí eu vim com um pincel com tinta acrílica da cor que eu queria e coloquei a tinta dentro desse pequeno vale. Logo em seguida, passei um papel pra limpar o que sujou por fora, deixando apenas e tinta que ficou presa dentro dos vales do texto. Depois de duas ou três camadas, o resultado ficou razoável.</p>
