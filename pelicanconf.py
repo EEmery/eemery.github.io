@@ -41,6 +41,9 @@ I18N_SUBSITES = {
             ("Info", "pt/pages/info/"),
         ),
         "STATIC_PATHS": [],  # Don't duplicate static files in pt/
+        # Feeds for Portuguese subsite (will be in pt/feeds/)
+        "FEED_ALL_ATOM": "feeds/all.atom.xml",
+        "FEED_ALL_RSS": "feeds/all.rss.xml",
     }
 }
 
