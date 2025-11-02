@@ -12,14 +12,18 @@ SITEURL = "https://robotsandcoffee.co"
 RELATIVE_URLS = False
 
 # --- Feed Configuration ---
-# English feeds (at root)
-FEED_ALL_ATOM = "feeds/all.atom.xml"          # All posts (all languages mixed)
+# Mixed language feeds (all posts from all languages)
+FEED_ALL_ATOM = "feeds/all.atom.xml"          # All posts (EN + PT mixed)
+FEED_ALL_RSS = "feeds/all.rss.xml"            # All posts (EN + PT mixed)
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
-FEED_ALL_RSS = "feeds/all.rss.xml"            # All posts (all languages mixed)
 CATEGORY_FEED_RSS = "feeds/{slug}.rss.xml"
 
+# Language-specific feeds (English-only)
+TRANSLATION_FEED_ATOM = "feeds/{lang}.atom.xml"   # English: feeds/en.atom.xml
+TRANSLATION_FEED_RSS = "feeds/{lang}.rss.xml"     # English: feeds/en.rss.xml
+
 # Note: Portuguese feeds are configured in pelicanconf.py I18N_SUBSITES
-# They will be at: pt/feeds/all.atom.xml and pt/feeds/all.rss.xml
+# Portuguese-only feeds: pt/feeds/all.atom.xml and pt/feeds/all.rss.xml
 
 # Optional: Limit number of items in feeds
 FEED_MAX_ITEMS = 20
