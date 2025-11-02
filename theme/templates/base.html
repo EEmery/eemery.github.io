@@ -7,6 +7,14 @@
     
     <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
 
+    <!-- RSS/ATOM Feeds -->
+    {% if FEED_ALL_ATOM %}
+    <link rel="alternate" type="application/atom+xml" title="{{ SITENAME }} - All Posts (Atom)" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} - All Posts (RSS)" href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">
+    {% endif %}
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
