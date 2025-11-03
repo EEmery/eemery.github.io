@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally defeating my worst enemies – or simply making a website - Robots and Coffee Co.</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robots and Coffee Co. - All Posts (Atom)" href="https://robotsandcoffee.co/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robots and Coffee Co. - All Posts (RSS)" href="https://robotsandcoffee.co/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/">LOGS</a>
+                        <a href="/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/pt/finally-defeating-my-worst-enemies–or-simply-making-a-website/" class="lang-button">
+BR                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+    <article class="post">
+        <header>
+            <div class="post-header-top">
+                <span class="material-symbols-outlined post-icon">sim_card_download</span>
+                <div class="post-header-info">
+                    <div class="post-meta">
+                        <span class="meta-label">TYPE:</span>
+                        <span class="meta-value">LOG</span>
+                    </div>
+                    <time datetime="2025-11-03T10:18:00+00:00">
+                        <span class="meta-label">TIMESTAMP:</span>
+                        <span class="meta-value">2025-11-03 10-18</span>
+                    </time>
+                </div>
+            </div>
+            <h1>Finally defeating my worst enemies – or simply making a website</h1>
+        </header>
+        
+        <div class="post-content">
+            <p>After approximately a billion years with "making a blog" on my personal projects list, I can finally mark this item as completed. Anything involving front-end development in one way or another tends to be my worst enemy. Navigating the ocean of framework options, browser and device compatibility, aesthetics, and my volatile decisions makes the process of creating a simple graphical interface a nightmare.</p>
+<p>That's why I decided to take the easy way out (from my perspective) and make an extremely simple blog, both functionally (it only has a list of articles and an information page) and aesthetically (zero colors, everything in grayscale and with fonts I've always liked). Besides making my life easier when writing the site's code, I believe a simple interface ends up being more resistant to the eternal ebb and flow of my aesthetic interests. I hope I don't want to redo the entire site every two days.</p>
+<h2>Leaving the Traces of Development Exposed</h2>
+<p>During the development process, I created a "test page" with basic markdown functionalities (bold, italics, code blocks, etc.) to test and build the aesthetic I wanted to achieve. These pages are still available and should remain there as they are. They could be hidden and only used locally when I wanted to make some adjustments to the layout, but I don't think that connects with the way I want to build things.</p>
+<p>I've been increasingly reflecting on the importance of leaving the traces of the construction process exposed. More than that, exposing the internal gears that make something work. Lately, I've been quite bothered by observing how things around us are closed off, disguised to hide their inner workings, sometimes under the name of comfort or a better user experience, but, most of the time, it's just to keep the system out of our control and understanding.</p>
+<p>On the other side of the coin of this obsession, I've been drawn to devices and systems that choose to leave their internal parts explicit. Whether in a simpler way, like pocket operators which are basically exposed circuit boards, inviting you to imagine what's happening "under the hood," or more complicated, like devices that come with a simple screwdriver in the packaging, encouraging you to open the product and modify it to your liking right away. You can go even further and think about those that opt ​​for the open hardware and software path, like the R36S, Flipper Zero, and so many others. I see something similar in the art world and the maker world as well; Laura Kampf and Tom Sachs quickly come to mind.</p>
+<p>Leaving the test page published is a tiny nod to this kind of creative approach to making.</p>
+<h2>Housekeeping</h2>
+<p>I intend to continue publishing things on Substack as well. Although the site has RSS and Atom feeds, you can continue following the publications there too. Use the platform you find best.</p>
+        </div>
+        
+        <footer class="post-footer">
+            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+        </footer>
+    </article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robots and Coffee Co.</p>
+    </footer> -->
+
+</body>
+</html>
