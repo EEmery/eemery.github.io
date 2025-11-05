@@ -8,6 +8,10 @@ SITEURL = ""
 TIMEZONE = "Europe/London"
 DEFAULT_DATE_FORMAT = "%Y-%m-%d"
 
+# Site logo for RSS/Atom feeds
+SITELOGO = "/theme/images/logo-large.png"
+SITELOGO_SIZE = "600"  # Width in pixels (recommended: 512-600)
+
 # --- Paths and URLs ---
 PATH = "content"
 ARTICLE_PATHS = ["articles"]

@@ -11,6 +11,9 @@ from pelicanconf import *
 SITEURL = "https://robotsandcoffee.co"
 RELATIVE_URLS = False
 
+# Logo for RSS/Atom feeds (absolute URL for feed readers)
+SITELOGO = "https://robotsandcoffee.co/theme/images/logo-large.png"
+
 # --- Feed Configuration ---
 # Mixed language feeds (all posts from all languages)
 FEED_ALL_ATOM = "feeds/all.atom.xml"          # All posts (EN + PT mixed)
