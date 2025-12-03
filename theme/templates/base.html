@@ -58,7 +58,7 @@
                     {% set normalized_url = url.replace(DEFAULT_LANG + "/", "") if DEFAULT_LANG != "en" else url %}
                     {% if output_file and ((normalized_url == "" and output_file == "index.html") or (normalized_url != "" and normalized_url in output_file)) %}
                         <a href="/{{ url }}" class="nav-active">
-                            <span class="material-symbols-outlined">place_item</span>
+                            <span class="material-symbols-outlined">change_history</span>
                         </a>
                     {% else %}
                         <a href="/{{ url }}">{{ title.upper() }}</a>
