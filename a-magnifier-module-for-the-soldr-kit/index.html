@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magnifier Module for the Soldr Kit - Robots and Coffee Co.</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robots and Coffee Co. - All Posts (Atom)" href="https://robotsandcoffee.co/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robots and Coffee Co. - All Posts (RSS)" href="https://robotsandcoffee.co/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/">LOGS</a>
+                        <a href="/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/pt/a-magnifier-module-for-the-soldr-kit/" class="lang-button">
+BR                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+    <article class="post">
+        <header>
+            <div class="post-header-top">
+                <span class="material-symbols-outlined post-icon">sim_card_download</span>
+                <div class="post-header-info">
+                    <div class="post-meta">
+                        <span class="meta-label">TYPE:</span>
+                        <span class="meta-value">LOG</span>
+                    </div>
+                    <time datetime="2026-04-20T12:37:00+01:00">
+                        <span class="meta-label">TIMESTAMP:</span>
+                        <span class="meta-value">2026-04-20 12-37</span>
+                    </time>
+                </div>
+            </div>
+            <h1>A Magnifier Module for the Soldr Kit</h1>
+        </header>
+        
+        <div class="post-content">
+            <p>In the last few weeks, I received my SOLDR, a portable kit with a range of tools for electronic soldering. I fell in love with it. It's amazing how such a small box managed to replace a lot of junk that used to be stored in my cupboards.</p>
+<p>As the lazy person I am, soldering a circuit – especially when it was something small – always had a huge initial hurdle: taking things out of the cupboard, finding a free space, spreading everything out on the table, and finally, soldering what was needed amidst a universe of bits and pieces. The SOLDR considerably solved this process.</p>
+<p>The only thing I missed was a magnifying glass module to better see the small components. My kit came with what they called a "smartphone microscope," but it didn't work very well for my needs. Since I used to use a simple magnifying glass to solve this, I was missing it.</p>
+<p>So I decided to make my own module to fill this gap. I bought a small magnifying glass of approximately 45 mm and a 15 cm gooseneck with an M8 thread on one side and an M10 on the other. This, plus some 3D printed parts and magnets, should be enough.</p>
+<p><img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124153.png"></p>
+<p>The magnifying glass base occupies two slots in the grid; this was necessary to ensure good stability for the module. This also allowed for the addition of more magnets to improve adhesion to the grid (and to the table during use). The gooseneck connects to the base and the magnifying glass fitting directly via the M10 threads (on the base) and M8 threads (on the adapter). I used black filament and a "fluorescent yellow" from SUNLU to match the kit's original color palette.</p>
+<p><img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124512.png"></p>
+<p>You can access the 3D models to download the files below:</p>
+<ul>
+<li><a href="https://github.com/EEmery/assets-repository/tree/main/models/SOLDR%20Magnifier%20Module">GitHub</a></li>
+<li><a href="https://www.printables.com/">Printables</a></li>
+</ul>
+<h2>A quick reflection on the multiple iterations of a development process</h2>
+<p>A one-afternoon project like this might seem simple, but it's worth highlighting the number of iterations needed to ensure proper tolerances on all joints. Often, when watching YouTube videos or reading DIY blogs, people skip this part because it's not visually "interesting".</p>
+<p><img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420123947.png"></p>
+<p>The result is that almost no one talks about the three or four (or more) versions that ended up in the trash because the magnet came loose or the screw wouldn't turn. This ends up giving the impression that the project was much easier than it actually was, or that whoever designed it has a superhuman ability to get everything right the first time. In reality, good engineering (even garage engineering) is made up of mistakes, adjustments, and many tolerance tests before the final model is ready.</p>
+        </div>
+        
+        <footer class="post-footer">
+            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+        </footer>
+    </article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robots and Coffee Co.</p>
+    </footer> -->
+
+</body>
+</html>
