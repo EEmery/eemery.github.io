@@ -18,7 +18,7 @@ A base da lupa ocupa dois slots na grade; foi o necessário para garantir uma bo
 
 ![]({static}/images/Pasted%20image%2020260420124512.png)
 
-Você pode acessar os modelos 3D para baixar os arquivos abaixo:
+Você pode acessar os modelos 3D para baixar os arquivos abaixo.
 
 - [GitHub](https://github.com/EEmery/assets-repository/tree/main/models/SOLDR%20Magnifier%20Module)
 - [Printables](https://www.printables.com/model/1695284-soldr-magnifier-module)

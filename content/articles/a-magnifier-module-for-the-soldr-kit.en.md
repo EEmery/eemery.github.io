@@ -18,7 +18,7 @@ The magnifying glass base occupies two slots in the grid; this was necessary to 
 
 ![]({static}/images/Pasted%20image%2020260420124512.png)
 
-You can access the 3D models to download the files below:
+You can access the 3D models to download the files below.
 
 - [GitHub](https://github.com/EEmery/assets-repository/tree/main/models/SOLDR%20Magnifier%20Module)
 - [Printables](https://www.printables.com/model/1695284-soldr-magnifier-module)
