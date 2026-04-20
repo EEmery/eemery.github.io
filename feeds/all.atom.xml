@@ -7,10 +7,10 @@
 &lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124153.png"&gt;&lt;/p&gt;
 &lt;p&gt;The magnifying glass base occupies two slots in the grid; this was necessary to ensure good stability for the module. This also allowed for the addition of more magnets to improve adhesion to the grid (and to the table during use). The gooseneck connects to the base and the magnifying glass fitting directly via the M10 threads (on the base) and M8 threads (on the adapter). I used black filament and a "fluorescent yellow" from SUNLU to match the kit's original color palette.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124512.png"&gt;&lt;/p&gt;
-&lt;p&gt;You can access the 3D models to download the files below:&lt;/p&gt;
+&lt;p&gt;You can access the 3D models to download the files below.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/EEmery/assets-repository/tree/main/models/SOLDR%20Magnifier%20Module"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="[https://www.printables.com/](https://www.printables.com/model/1695284-soldr-magnifier-module)"&gt;Printables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.printables.com/model/1695284-soldr-magnifier-module"&gt;Printables&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;A quick reflection on the multiple iterations of a development process&lt;/h2&gt;
 &lt;p&gt;A one-afternoon project like this might seem simple, but it's worth highlighting the number of iterations needed to ensure proper tolerances on all joints. Often, when watching YouTube videos or reading DIY blogs, people skip this part because it's not visually "interesting".&lt;/p&gt;
@@ -23,10 +23,10 @@
 &lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124153.png"&gt;&lt;/p&gt;
 &lt;p&gt;A base da lupa ocupa dois slots na grade; foi o necessário para garantir uma boa estabilidade para o módulo. Isso também permitiu adicionar mais ímãs para que a adesão na grade (e na mesa, durante o uso) fosse melhor. O gooseneck se conecta na base e no encaixe da lupa diretamente pelas roscas M10 (na base) e M8 (no adaptador). Usei filamento preto e um "amarelo fluorescente" da SUNLU para seguir a paleta de cores original do kit.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420124512.png"&gt;&lt;/p&gt;
-&lt;p&gt;Você pode acessar os modelos 3D para baixar os arquivos abaixo:&lt;/p&gt;
+&lt;p&gt;Você pode acessar os modelos 3D para baixar os arquivos abaixo.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/EEmery/assets-repository/tree/main/models/SOLDR%20Magnifier%20Module"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="[https://www.printables.com/](https://www.printables.com/model/1695284-soldr-magnifier-module)"&gt;Printables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.printables.com/model/1695284-soldr-magnifier-module"&gt;Printables&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Uma rápida reflexão sobre as múltiplas iterações de um processo de desenvolvimento&lt;/h2&gt;
 &lt;p&gt;Um projeto de uma tarde como esse pode parecer simples, mas vale ressaltar a quantidade de iterações necessárias para garantir que as tolerâncias em todos os encaixes ficassem adequadas. Geralmente, quando assistimos a vídeos no YouTube ou lemos blogs de DIY, as pessoas pulam essa parte por não ser um tópico "interessante" visualmente.&lt;/p&gt;
