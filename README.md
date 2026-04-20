@@ -62,5 +62,5 @@ Paste the code bellow in the article and replace the video URL with the one YouT
 ## To Do's
 
 - [ ] Find a better way to attach images that work in both Pelican and Obsidian
-- [ ] Move `version-2` branch to `main` and update script code with it. Maybe change `source` to `production` or just `prod`
+- [ ] Move `version-2` branch to `main` and update script code with it. Maybe change `source` to `production` or just `prod` and maybe create a staging if necessary
 
