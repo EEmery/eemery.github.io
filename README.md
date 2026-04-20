@@ -2,11 +2,29 @@
 
 This is the repository for the Robots and Coffee Co. website.
 
+## Development Workflow
+
+**Running locally**
+
+1. Activate the environment with
+
+```bash
+. scripts/dev-activate
+```
+
+2. Run locally with
+
+```bash
+. scripts/dev-run
+```
+
+Access on http://127.0.0.1:8000
+
 ## Tips for managing content
 
 ### Attaching images
 
-When creating the file, simply paste the image normally with `cmd+v`, after the post is done, do a find an replace of `content/` for `{static}/`.
+When creating the file, simply paste the image normally with `cmd+v`, after the post is done, do a find an replace of `content/` for `{static}/` with `opt + cmd + F`.
 
 This will break the visualisation in Obsidian but enable Pelican to render the image properly.
 
@@ -44,4 +62,5 @@ Paste the code bellow in the article and replace the video URL with the one YouT
 ## To Do's
 
 - [ ] Find a better way to attach images that work in both Pelican and Obsidian
+- [ ] Move `version-2` branch to `main` and update script code with it. Maybe change `source` to `production` or just `prod`
 
