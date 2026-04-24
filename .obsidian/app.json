@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content/articles",
+  "attachmentFolderPath": "content/images",
+  "autoConvertHtml": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute"
+}

@@ -1,0 +1,91 @@
+Title: Criando uma Estação Climática – Projeto Telesto Parte 1
+Date: 2025-01-22 16:00
+Lang: pt
+Slug: making-a-weather-station-telesto-project-part-1
+Translation: true
+
+Desde que mudei pro meu atual apartamento, tenho vontade de fazer uma estação climática simples pra colocar na varanda. O prédio fica ao lado de uma reserva natural e não tem outros vizinhos altos por perto. Tem dias que o vento é tão forte que acaba sendo impraticável ficar na varanda, no inverno principalmente.
+
+Quero poder analisar dados de velocidade e direção do vento, ver se consigo encontrar padrões, só por diversão, sem nenhuma grande utilidade por trás. Uma vez com uma estação climática, por que não adicionar outros sensores? Talvez medir a quantidade de chuva, luminosidade, pressão atmosférica etc. Como atualmente moro em Londres, cidade famosa pelas chuvas e céu cinzento, talvez encontre dados interessantes por aqui. Indo mais além, quem sabe consigo criar uma réplica da estação e colocar em Recife, minha cidade natal, pra ver as diferenças drásticas (e semelhanças) entre os dois climas.
+
+O primeiro passo no meu processo de criação foi definir os dados que queria que a minha estação coletasse, em ordem de prioridade: velocidade do vento, direção do vento, quantidade de chuva e luminosidade. Depois, dei uma buscada rápida na internet pra ver o que já tem sido feito nessa área, aprender um pouco com quem já explorou algum projeto parecido.
+
+Um dos primeiros resultados que encontrei foi esse kit de estação climática à venda na Pimoroni. Eles usam basicamente uma "torre" pra cada tipo de sensor, uma pro anemômetro, sensor que mede a velocidade do vento, uma pro anemoscópio, sensor que mede a direção do vento, uma para o pluviômetro, sensor que mede a quantidade de chuva e, por fim, uma torre para uma placa especial chamada "enviro weather", que mede temperatura, pressão e humidade (com um BME280), e luminosidade (com um LTR-559). Tudo isso se conecta a um Raspberry Pi Pico W, que trata as informações e envia para um aplicativo próprio ou algo do tipo.
+
+![Estação climática caseira comercial]({static}/images/Pasted%20image%2020251101160725.png)
+
+Essa estação parece muito completa para o que quero, mas consigo ver algumas coisas que mudaria, já que quero fazer a minha própria. O primeiro ponto é que isso vai ficar na minha varanda, o tempo todo no campo de visão de quem está dentro do apartamento, então não quero uma cacofonia visual que faça minha varanda parecer aqueles telhados cheios de antenas que ninguém sabe mais pra que serve. Não que eu tenha a ingenuidade de achar que vou conseguir pensar em algo melhor que a estação da Pimoroni ou que, até se conseguir pensar em algo melhor, consiga executar as minhas ideias com excelente fidelidade, mas ao menos eu vou poder dizer no final de tudo que tentei.
+
+Fiz alguns desenhos conceituais da direção que acho que poderia ser interessante seguir, mas tendo em mente que são apenas conceitos.
+
+![Desenhos conceituais iniciais do projeto Telesto]({static}/images/Pasted%20image%2020251101161014.png)
+
+A direção mais importante que vejo nesse conceito é reduzir ao máximo a quantidade de torres que a estação terá. Se possível, queria ter apenas uma, o que requer que essa torre seja oca pra que os fios e tubos dos sensores passassem por dentro dela.
+
+![Vista seccionada da torre]({static}/images/Pasted image 20251101171911.png)
+
+Esse design, contanto, vai depender de como vou desenvolver os sensores. Eles que vão definir as limitações que terei que acomodar no design final, por isso, vamos começar esse projeto explorando ideias para cada um dos sensores.
+
+## Anemômetro
+
+Um anemômetro é basicamente um cata vento conectado a um sensor de velocidade. À medida que o catavento gira mais, podemos dizer que estamos detectando um vento mais rápido. Essa medição pode então ser comparada com uma fonte estável de vento, que já se conhece a velocidade, para que possamos calibrar o nosso sensor de velocidade e informar os dados coletados em unidades já estabelecidas, como Km/h, nós etc.
+
+O ponto fundamental do anemômetro é, então, medir a velocidade. Mas como podemos fazer isso? Uma opção é comprar algum sensor de velocidade já pronto, outra é explorar algumas ideias que vão mais fundo no conceito mais fundamental de velocidade: variação de posição no tempo, ou, como aprendemos na escola, "delta S sobre delta T". Isso significa que se conseguirmos medir a posição (angular) do catavento ao longo do tempo e enviarmos para um microcontrolador ou microprocessador, como um Arduino ou Raspberry Pi, ele deve ser capaz de calcular a velocidade a partir dessas posições e do tempo que durou a mudança.
+
+Uma forma muito comum de medir a posição de um elemento que gira, como um motor, é através de um encoder. Encoders podem ser feitos de várias formas, mas os mais comuns usam potenciômetros, que são basicamente um dispositivo que muda a sua resistência elétrica à medida que o seu eixo gira, daí é possível associar a cada valor de resistência uma posição.
+
+O problema dos encóderes por potenciômetro é que eles tendem a ter uma resistência ao movimento muito alta, é preciso pôr um pouco de força pra girar. Isso dificulta o uso na nossa aplicação porque precisamos ser capazes de fazer um catavento que gire mesmo com ventos fracos, pra poder detectar esses ventos.
+
+Um outro tipo de encoder que pode ser mais adequado para nossa aplicação são os encoders magnéticos, que, como o nome sugere, calculam a direção e magnitude do campo magnético em sua volta. Em termos práticos, você coloca um ímã no eixo da peça que você quer medir o giro e deixa o encoder perto do ímã, mas fora do eixo, num lugar que não vai girar. À medida que o ímã gira com o eixo, o campo magnético que ele produz vai girar em relação ao encoder, mudando a direção e magnitude dele. Daí você pode então associar cada um desses valores a uma posição específica. Visualizar a aplicação desse encoder pode ajudar bastante na compreensão.
+
+Para aplicações como a nossa, onde não queremos adicionar resistência no giro do catavento, o encoder magnético parece uma ótima ideia. Mas, se formos olhar de forma prática, ele pode nos trazer problemas na hora de montarmos a estação climática seguindo a direção apresentada no conceito do começo desse post, que sugere apenas uma torre, com os fios e tubos dos sensores passando por dentro dela. O encoder magnético comumente a venda usa vários fios para se comunicar com a placa que vai servir de cérebro da estação (o microcontrolador), o que pode ser um número alto dependendo da espessura da torre. Por hora, isso não é um problema em si, mas um risco.
+
+Ainda na ideia de explorar nossas opções, podemos pensar em uma outra forma de usar ímãs para medir a velocidade, mas sem usar o sensor de magnitude e direção de campo magnético. Existe um tipo de interruptor chamado Reed que "liga" um circuito quando um ímã suficientemente forte passa perto dele. Se usarmos alguns interruptores Reed associados a resistores com valores únicos, podemos gerar um valor de tensão elétrica único para cada posição do ímã. Podemos visualizar isso melhor no circuito abaixo:
+
+![Diagrama do circuito]({static}/images/Pasted%20image%2020251101161418.png)
+
+Neste circuito, se o ímã está em cima do interruptor Reed A (`Sa`), então apenas esse caminho fluirá com corrente elétrica. Dado que nele temos o resistor A (`Ra = 440 Ω`) e o resistor zero (`R0 = 220 Ω`), a tensão medida pelo microcontrolador (GPIO) será de `1.667 v`.
+
+<video autoplay loop muted playsinline style="max-width: 100%; height: auto;">
+  <source src="/videos/Dream 3 A.mp4" type="video/mp4">
+</video>
+
+Quando o ímã saí de cima do interruptor Reed A (Sa) e vai para o interruptor Reed B (`Sb`), a corrente elétrica passa a fluir pelo caminho B, que tem o resistor B (`Rb = 110 Ω`) e o resistor zero (`R0 = 220 Ω`), daí, a tensão medida pelo microcontrolador muda para `3.333 v`.
+
+<video autoplay loop muted playsinline style="max-width: 100%; height: auto;">
+  <source src="/videos/Dream 3 B.mp4" type="video/mp4">
+</video>
+
+Se cada interruptor Reed tiver associado a ele um resistor de valor único, o valor da tensão medida no microcontrolador também será única. Então podemos mapear esse valor único de tensão para encontrarmos a posição do ímã.
+
+Se você quiser aprender mais sobre esse circuito simples que usa dois resistores em cada caminho para gerar tensão elétrica de valores específicos, vale a pena buscar por circuito divisor de tensão. Algo similar acontece nos chamados conversores digital-analógico simples.
+
+O interessante dessa abordagem é que ela precisa apenas de três fios: um `Vcc` (`5V`), um `GND` (terra) e um que transporta o sinal (`GPIO`), o valor da tensão entre os resistores. Isso exige que o microcontrolador tenha uma porta analógica para receber esse sinal, mas isso é bem comum nas placas de hoje em dia. A desvantagem, claro, é que ele é bem mais complexo de montar do que usar um encoder magnético simples todo pronto.
+
+## Anemoscópio
+
+O anemoscópio é o instrumento que vai medir a direção do vento. Isso pode ser feito utilizando a mesma abordagem do Anemômetro. Nesse caso é até mais fácil: enquanto no Anemômetro precisamos medir a posição no tempo para calcular a velocidade, no Anemoscópio precisamos apenas da posição atual, sem precisar levar em consideração o intervalo de tempo.
+
+## Pluviômetro
+
+O pluviômetro é o instrumento responsável por medir a quantidade de chuva que cai em uma determinada região. Essa quantidade é geralmente dada em milímetros de água, ou seja, pra medir a quantidade de chuva, basta deixar um recipiente aberto no meio da chuva e, usando uma régua, medir a profundidade da água acumulada. Esse é o valor da quantidade de chuva.
+
+Mas como podemos fazer isso de forma automática, para que a nossa estação climática não precise ter pernas e braços pra ir buscar uma régua e medir a coluna de água? Apesar de, agora que escrevi, achar uma excelente ideia uma estação climática com braços e pernas, eu ia demorar muito mais do que esperava pra terminar um projeto como esse. Então vamos seguir uma abordagem mais simples, que é comumente utilizada em estações climáticas por aí, inclusive na da Pimoroni e no antigo projeto brasileiro PluviOn.
+
+A ideia é coletar água em um recipiente móvel que fica em um eixo. A combinação do eixo com o formato do recipiente o torna um sistema biestável, como uma gangorra, capaz de encontrar estabilidade nos dois lados. Podemos visualizar isso melhor na animação abaixo, a medida que a água cai e um lado do recipiente enche, o peso da água muda o centro de gravidade do sistema, até o ponto em que ele gira no eixo, despejando a água acumulada naquele lado. O ciclo então reinicia, mas dessa vez no lado oposto do recipiente.
+
+<video autoplay loop muted playsinline style="max-width: 100%; height: auto;">
+  <source src="/videos/Dream 4.mp4" type="video/mp4">
+</video>
+
+Uma vez que construirmos um sistema como esse, podemos contar quantas vezes o recipiente muda de lado, sabendo que cada mudança representa o acúmulo de uma quantidade específica de água. Isso significa que a nossa medição vai se dar em intervalos, se o recipiente gira com 20 mL de água, nós só vamos conseguir medir a quantidade de chuva de 20 em 20 mL.
+
+A contagem pode ser feita de várias formas, uma delas é usar abordagens parecidas com a que exploramos no sensor de posição do Anemômetro e do Anemoscópio: um ímã fica colado no meio do recipiente coletor e um interruptor reed fica preso fora do recipiente, na parte fixa. Toda vez que o recipiente mudar de lado, o ímã passará pelo interruptor e gerará um sinal elétrico que podemos enviar para o microcontrolador. Abordagens com encoders também funcionam, dado que podemos usá-los pra observar o giro do recipiente.
+
+## Luminosidade
+
+Este talvez seja o mais simples de explorar. Um simples resistor dependente de luz (LDR - Light Dependent Resistor) consegue variar a sua resistência elétrica dependendo da luminosidade que ele capta. Uma opção mais interessante talvez seja usar o LTR-559 junto com o BME280, pra ser capaz de medir temperatura, pressão, umidade e luminosidade.
+
+## Próximos passos
+
+No próximo post vamos prototipar algumas dessas ideias que tivemos sobre medir a posição/rotação de um eixo. O objetivo é explorar em mais detalhes as abordagens, entender como calcular o valor dos resistores e tensões no circuito, as limitações e benefícios de cada ideia, e aprender com o processo.

@@ -1,0 +1,10 @@
+#! /bin/bash
+
+python3 -m pelican content -s publishconf.py
+
+ghp-import output -b source
+
+git checkout source
+git checkout version-2 -- .gitignore
+git add --all
+echo "Now you can commit and publish the new website version by pushing this branch"

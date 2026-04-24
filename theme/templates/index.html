@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Logs - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+    <section class="article-list">
+        <div class="page-header-top">
+            <span class="material-symbols-outlined page-icon">toast</span>
+            {% if DEFAULT_LANG == 'pt' %}
+                <h1>LOGS INSERIDOS</h1>
+            {% else %}
+                <h1>LOG ENTRIES</h1>
+            {% endif %}
+        </div>
+        <ul>
+            {% for article in articles %}
+            <li class="article-item">
+                <a href="{{ SITEURL }}/{{ article.url }}" class="article-link">
+                    <span class="material-symbols-outlined article-icon">sd_card</span>
+                    <div class="article-info">
+                    <time datetime="{{ article.date.isoformat() }}">
+                        {{ article.date.strftime('%Y-%m-%d %H-%M') }}
+                    </time>
+                        <span class="article-title">
+                            {{ article.title }}
+                        </span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
