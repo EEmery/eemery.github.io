@@ -13,7 +13,7 @@
             {% endif %}
         </div>
         <ul>
-            {% for article in articles %}
+            {% for article in articles if article.category.name != 'ephemerals' %}
             <li class="article-item">
                 <a href="{{ SITEURL }}/{{ article.url }}" class="article-link">
                     <span class="material-symbols-outlined article-icon">sd_card</span>

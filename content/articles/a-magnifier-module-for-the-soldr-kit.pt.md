@@ -1,4 +1,4 @@
-Title: Um Módulo de Lupa para o Soldr Kit
+Title: Um Módulo de Lupa para o SOLDR Kit
 Date: 2026-04-20 12:37
 Lang: pt
 Slug: a-magnifier-module-for-the-soldr-kit

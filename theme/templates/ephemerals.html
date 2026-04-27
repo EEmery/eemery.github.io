@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Ephemerals - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="article-list ephemerals-list">
+    <div class="page-header-top">
+        <span class="material-symbols-outlined page-icon">fullscreen_exit</span>
+        {% if DEFAULT_LANG == 'pt' %}
+        <h1>EFÊMEROS</h1>
+        {% else %}
+        <h1>EPHEMERALS</h1>
+        {% endif %}
+    </div>
+    <ul>
+        {% for article in articles if article.category.name == 'ephemerals' %}
+        <li class="article-item">
+            <a href="{{ SITEURL }}/{{ article.url }}" class="article-link">
+                <span class="material-symbols-outlined article-icon">deployed_code</span>
+                <div class="article-info">
+                    <time datetime="{{ article.date.isoformat() }}">
+                        {{ article.date.strftime('%Y-%m-%d %H-%M') }}
+                    </time>
+                    <span class="article-title">
+                        {{ article.title }}
+                    </span>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

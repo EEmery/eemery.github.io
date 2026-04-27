@@ -14,7 +14,7 @@ SITELOGO_SIZE = "600"  # Width in pixels (recommended: 512-600)
 
 # --- Paths and URLs ---
 PATH = "content"
-ARTICLE_PATHS = ["articles"]
+ARTICLE_PATHS = ["articles", "ephemerals"]
 PAGE_PATHS = ["pages"]
 
 # Pretty URLs (remove .html extension)
@@ -42,6 +42,7 @@ I18N_SUBSITES = {
         "DEFAULT_LANG": "pt",
         "MENUITEMS": (
             ("Logs", "pt/"),
+            ("Ephm", "pt/ephemerals/"),
             ("Info", "pt/pages/info/"),
         ),
         "STATIC_PATHS": [],  # Don't duplicate static files in pt/
@@ -53,9 +54,10 @@ I18N_SUBSITES = {
 
 # --- Page & Menu Setup ---
 # 1. "Logs" page (list of all articles)
-DIRECT_TEMPLATES = ["index", "404"]
+DIRECT_TEMPLATES = ["index", "ephemerals", "404"]
 INDEX_SAVE_AS = "index.html" # Save the article list as index.html (root page)
-PAGINATED_TEMPLATES = {"index": None}
+EPHEMERALS_SAVE_AS = "ephemerals/index.html"
+PAGINATED_TEMPLATES = {"index": None, "ephemerals": None}
 
 # 404 page (GitHub Pages will automatically use this)
 TEMPLATE_PAGES = {"404.html": "404.html"}
@@ -65,12 +67,15 @@ DISPLAY_PAGES_ON_MENU = False # We want a custom menu
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
     ("Logs", ""),
+    ("Ephm", "ephemerals/"),
     ("Info", "pages/info/"),
 )
 
-# 3. No Author Pages
-AUTHOR_SAVE_AS = ""  # Disables generating author pages
+# 3. No Author/Category Pages
+AUTHOR_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""
+CATEGORY_SAVE_AS = ""
+CATEGORIES_SAVE_AS = ""
 
 # --- Static Files Configuration ---
 # Copy static files (js, images, videos, etc.) to output

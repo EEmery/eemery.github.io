@@ -74,6 +74,13 @@
                             {% if translation.lang == 'pt' %}BR{% else %}{{ translation.lang.upper() }}{% endif %}
                         </a>
                     {% endfor %}
+                {% elif output_file and output_file == 'ephemerals/index.html' %}
+                    {# Language switcher for ephemerals page #}
+                    {% if DEFAULT_LANG == 'en' %}
+                        <a href="/pt/ephemerals/" class="lang-button">BR</a>
+                    {% else %}
+                        <a href="/ephemerals/" class="lang-button">EN</a>
+                    {% endif %}
                 {% elif output_file and 'index.html' in output_file %}
                     {# Language switcher for logs page #}
                     {% if DEFAULT_LANG == 'en' %}

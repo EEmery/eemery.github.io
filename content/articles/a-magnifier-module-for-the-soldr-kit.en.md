@@ -1,4 +1,4 @@
-Title: A Magnifier Module for the Soldr Kit
+Title: A Magnifier Module for the SOLDR Kit
 Date: 2026-04-20 12:37
 Lang: en
 Slug: a-magnifier-module-for-the-soldr-kit
