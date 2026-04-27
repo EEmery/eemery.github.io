@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
     
     <script>
         // Apply theme immediately to avoid flash
@@ -49,6 +49,7 @@
         <nav class="main-nav">
             <div class="nav-links">
                         <a href="/">LOGS</a>
+                        <a href="/ephemerals/">EPHM</a>
                         <a href="/pages/info/">INFO</a>
             </div>
 
@@ -64,26 +65,26 @@ BR                        </a>
     </header>
 
     <main class="content">
-    <article class="post">
-        <header>
-            <div class="post-header-top">
-                <span class="material-symbols-outlined post-icon">sim_card_download</span>
-                <div class="post-header-info">
-                    <div class="post-meta">
-                        <span class="meta-label">TYPE:</span>
-                        <span class="meta-value">LOG</span>
-                    </div>
-                    <time datetime="2025-01-22T16:00:00+00:00">
-                        <span class="meta-label">TIMESTAMP:</span>
-                        <span class="meta-value">2025-01-22 16-00</span>
-                    </time>
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
                 </div>
+                <time datetime="2025-01-22T16:00:00+00:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2025-01-22 16-00</span>
+                </time>
             </div>
-            <h1>Making a Weather Station – Telesto Project Part 1</h1>
-        </header>
-        
-        <div class="post-content">
-            <p>Ever since I moved into my current apartment, I've been wanting to make a simple weather station to put on my balcony. My building is next to a nature reserve and there are no other tall neighbors nearby. There are days when the wind is so strong that it's impractical to stay on the balcony, especially in winter time.</p>
+        </div>
+        <h1>Making a Weather Station – Telesto Project Part 1</h1>
+    </header>
+
+    <div class="post-content">
+        <p>Ever since I moved into my current apartment, I've been wanting to make a simple weather station to put on my balcony. My building is next to a nature reserve and there are no other tall neighbors nearby. There are days when the wind is so strong that it's impractical to stay on the balcony, especially in winter time.</p>
 <p>I want to be able to analyze wind speed and direction data, see if I can find patterns, just for fun, without any major purpose behind it. Once I have a weather station, why not add other sensors? Maybe measure the amount of rain, light, atmospheric pressure, etc. Since I currently live in London, a city famous for its rain and gray skies, I might find interesting data here. Going further, who knows, maybe I can create a replica of the station and put it in Recife, my hometown, to see the drastic differences (and similarities) between the two climates.</p>
 <p>The first step in my creation process was to define the data I wanted my station to collect, in order of priority: wind speed, wind direction, amount of rain, and light. Then, I did a quick search on the internet to see what has already been done in this area, to learn a little from those who have already explored a similar project.</p>
 <p>One of the first results I found was this weather station kit for sale at Pimoroni. They basically use a "tower" for each type of sensor, one for the anemometer, a sensor that measures wind speed, one for the anemoscope, a sensor that measures wind direction, one for the rain gauge, a sensor that measures the amount of rain and, finally, a tower for a special board called "enviro weather", which measures temperature, pressure and humidity (with a BME280), and luminosity (with an LTR-559). All of this connects to a Raspberry Pi Pico W, which processes the information and sends it to a specific application or something similar.</p>
@@ -132,12 +133,12 @@ BR                        </a>
 <p>This is perhaps the simplest to explore. A simple light-dependent resistor (LDR) can vary its electrical resistance depending on the light it receives. A more interesting option might be to use the LTR-559 together with the BME280, to be able to measure temperature, pressure, humidity and light.</p>
 <h2>Next Steps</h2>
 <p>In the next post we will prototype some of these ideas we had about measuring the position/rotation of an axis. The goal is to explore the approaches in more detail, understand how to calculate the value of resistors and voltages in the circuit, the limitations and benefits of each idea, and learn from the process.</p>
-        </div>
-        
-        <footer class="post-footer">
-            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
-        </footer>
-    </article>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
     </main>
 
     <!-- <footer class="main-footer">

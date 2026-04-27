@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
     
     <script>
         // Apply theme immediately to avoid flash
@@ -49,6 +49,7 @@
         <nav class="main-nav">
             <div class="nav-links">
                         <a href="/">LOGS</a>
+                        <a href="/ephemerals/">EPHM</a>
                         <a href="/pages/info/">INFO</a>
             </div>
 
@@ -64,26 +65,26 @@ BR                        </a>
     </header>
 
     <main class="content">
-    <article class="post">
-        <header>
-            <div class="post-header-top">
-                <span class="material-symbols-outlined post-icon">sim_card_download</span>
-                <div class="post-header-info">
-                    <div class="post-meta">
-                        <span class="meta-label">TYPE:</span>
-                        <span class="meta-value">LOG</span>
-                    </div>
-                    <time datetime="2025-03-18T16:00:00+00:00">
-                        <span class="meta-label">TIMESTAMP:</span>
-                        <span class="meta-value">2025-03-18 16-00</span>
-                    </time>
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
                 </div>
+                <time datetime="2025-03-18T16:00:00+00:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2025-03-18 16-00</span>
+                </time>
             </div>
-            <h1>Making the Pocket Operator Television</h1>
-        </header>
-        
-        <div class="post-content">
-            <p>This year, the pocket operator completed ten years since its creation. And to celebrate this milestone, Teenage Engineering decided to hold a contest for DIY creations that involve the pocket operator in some way, the <code>#PO10DIY</code>. Of course, I had to participate.</p>
+        </div>
+        <h1>Making the Pocket Operator Television</h1>
+    </header>
+
+    <div class="post-content">
+        <p>This year, the pocket operator completed ten years since its creation. And to celebrate this milestone, Teenage Engineering decided to hold a contest for DIY creations that involve the pocket operator in some way, the <code>#PO10DIY</code>. Of course, I had to participate.</p>
 <p>In fact, when I first saw the post, I couldn't think of anything I could do to enter. But I couldn't get the idea of ​​a mechanical arm dancing in conjunction with a pocket operator out of my head.</p>
 <p>I was recently reading a paper published by an Apple robotics team that experimented with a tabletop robot that tries to integrate more expressive movements into its routine (<a href="https://arxiv.org/pdf/2501.12493">ELEGNT: Expressive and Functional Movement Design for Non-anthropomorphic Robot</a>). This type of robotics (and computing) that tries to escape from shallow utilitarianism is something that lives deep down in my heart. Teenage Engineering itself has already experimented with something very similar in the <a href="https://www.youtube.com/watch?v=RyWTx9ExAjQ">"R", a desktop robot</a> that had "emotion" as a function.</p>
 <p>This Apple article rekindled an old desire I have to try to create a robot like R. But developing (during the weekends) a robot like these and making it capable of "listening" to my pocket operator in time for the contest deadline would be a herculean task. Forget it, it would be cool, but it won't work this time. Never mind.</p>
@@ -191,12 +192,12 @@ BR                        </a>
 </ol>
 <p><strong>Add a call to your new animation function</strong></p>
 <p>Whether you are copying an existing animation and modifying it or creating a new one from scratch, you need to add a call to the new function in the main loop of the code. To do this, in the <code>main.py</code> file, simply <a href="https://github.com/EEmery/po-television/blob/main/src/main.py#L3-L6">import the function</a> and add it to <a href="https://github.com/EEmery/po-television/blob/main/src/main.py#L8-L14">the list of functions called <code>ANIMATIONS</code></a>.</p>
-        </div>
-        
-        <footer class="post-footer">
-            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
-        </footer>
-    </article>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
     </main>
 
     <!-- <footer class="main-footer">

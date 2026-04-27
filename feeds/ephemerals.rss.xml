@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Robots and Coffee Co. - ephemerals</title><link>https://robotsandcoffee.co/</link><description/><atom:link href="https://robotsandcoffee.co/feeds/ephemerals.rss.xml" rel="self"/><lastBuildDate>Mon, 27 Apr 2026 13:29:00 +0100</lastBuildDate><item><title>Materials Library for 3D Printing</title><link>https://robotsandcoffee.co/materials-library-for-3d-printing/</link><description>&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427131921.png"&gt;&lt;/p&gt;
+&lt;p&gt;This ephemeral space contains the inventory of 3D printing filaments available and not available.&lt;/p&gt;
+&lt;h2&gt;S001 – PLA White&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S001
+MATERIAL: PLA
+COLOR: WHITE
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE WHITE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130612.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S002 – PLA Beige&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S002
+MATERIAL: PLA
+COLOR: BEIGE
+MATERIAL MODIFIER …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Operator</dc:creator><pubDate>Mon, 27 Apr 2026 13:29:00 +0100</pubDate><guid>tag:robotsandcoffee.co,2026-04-27:/materials-library-for-3d-printing/</guid><category>ephemerals</category></item></channel></rss>

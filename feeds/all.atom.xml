@@ -1,5 +1,375 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Robots and Coffee Co.</title><link href="https://robotsandcoffee.co/" rel="alternate"/><link href="https://robotsandcoffee.co/feeds/all.atom.xml" rel="self"/><id>https://robotsandcoffee.co/</id><updated>2026-04-20T12:37:00+01:00</updated><entry><title>A Magnifier Module for the Soldr Kit</title><link href="https://robotsandcoffee.co/a-magnifier-module-for-the-soldr-kit/" rel="alternate"/><published>2026-04-20T12:37:00+01:00</published><updated>2026-04-20T12:37:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-20:/a-magnifier-module-for-the-soldr-kit/</id><summary type="html">&lt;p&gt;In the last few weeks, I received my SOLDR, a portable kit with a range of tools for electronic soldering. I fell in love with it. It's amazing how such a small box managed to replace a lot of junk that used to be stored in my cupboards.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Robots and Coffee Co.</title><link href="https://robotsandcoffee.co/" rel="alternate"/><link href="https://robotsandcoffee.co/feeds/all.atom.xml" rel="self"/><id>https://robotsandcoffee.co/</id><updated>2026-04-27T13:29:00+01:00</updated><entry><title>Making an Ephemeral Space</title><link href="https://robotsandcoffee.co/making-an-ephemeral-space/" rel="alternate"/><published>2026-04-27T13:29:00+01:00</published><updated>2026-04-27T13:29:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-27:/making-an-ephemeral-space/</id><summary type="html">&lt;p&gt;I like when blog posts are as immutable as possible: a registry in time, unchanged, capturing all the mistakes, the learnings, the naiveté. New posts can almost always update what has been published before, without erasing what was previously registered. An interesting timeline is formed capturing the non-linear process of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I like when blog posts are as immutable as possible: a registry in time, unchanged, capturing all the mistakes, the learnings, the naiveté. New posts can almost always update what has been published before, without erasing what was previously registered. An interesting timeline is formed capturing the non-linear process of learning.&lt;/p&gt;
+&lt;p&gt;Recently I've been having the need to share with some friends the same bits of information, mostly about what tools and materials I have available in my maker space so that they can use on their own projects. I've decided, then, to create a space called "ephemerals" where I can keep these types of utilitarian information. They are not necessarily a capture of a process or a project, but a simple space that works as some sort of public clipboard I can use to send my friends. It can change to reflect the current state of things at any time or get deleted out of nowhere.&lt;/p&gt;
+&lt;p&gt;First page there is a materials library for 3D printing (i.e., the filaments I have available), but more should come soon, as I see the need for it.&lt;/p&gt;</content><category term="articles"/></entry><entry><title>Materials Library for 3D Printing</title><link href="https://robotsandcoffee.co/materials-library-for-3d-printing/" rel="alternate"/><published>2026-04-27T13:29:00+01:00</published><updated>2026-04-27T13:29:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-27:/materials-library-for-3d-printing/</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427131921.png"&gt;&lt;/p&gt;
+&lt;p&gt;This ephemeral space contains the inventory of 3D printing filaments available and not available.&lt;/p&gt;
+&lt;h2&gt;S001 – PLA White&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S001
+MATERIAL: PLA
+COLOR: WHITE
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE WHITE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130612.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S002 – PLA Beige&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S002
+MATERIAL: PLA
+COLOR: BEIGE
+MATERIAL MODIFIER …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427131921.png"&gt;&lt;/p&gt;
+&lt;p&gt;This ephemeral space contains the inventory of 3D printing filaments available and not available.&lt;/p&gt;
+&lt;h2&gt;S001 – PLA White&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S001
+MATERIAL: PLA
+COLOR: WHITE
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE WHITE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130612.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S002 – PLA Beige&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S002
+MATERIAL: PLA
+COLOR: BEIGE
+MATERIAL MODIFIER: PLUS
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PLUS BEIGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130631.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S003 – PLA Grey Light&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S003
+MATERIAL: PLA
+COLOR: GREY LIGHT
+MATERIAL MODIFIER: HIGH SPEED MATTE
+BRAND: ERYONE
+DIAMETER: 1.75 mm
+EXTERNAL: ERYONE PLA HIGH SPEED LIGHT GREY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130645.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S004 – PLA Grey&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S004
+MATERIAL: PLA
+COLOR: GREY
+MATERIAL MODIFIER: MATTE
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA MATTE SLATE GREY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130702.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S005 – PLA Black&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S005
+MATERIAL: PLA
+COLOR: BLACK
+MATERIAL MODIFIER: PLUS
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PLUS BLACK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130716.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S006 – PLA Blue&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S006
+MATERIAL: PLA
+COLOR: BLUE
+MATERIAL MODIFIER: PLUS
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA PLUS 2.0 BLUE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130728.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S007 – PLA Blue Light&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S007
+MATERIAL: PLA
+COLOR: BLUE LIGHT
+MATERIAL MODIFIER: PRO
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PRO LIGHT BLUE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130738.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S008 – PLA Green&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S008
+MATERIAL: PLA
+COLOR: GREEN
+MATERIAL MODIFIER: PRO
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PRO GREEN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130747.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S009 – PLA Green Neon&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S009
+MATERIAL: PLA
+COLOR: GREEN NEON
+MATERIAL MODIFIER: MATTE
+BRAND: SUNLU
+DIAMETER: 1.75 mm
+EXTERNAL: SUNLU PLA MATTE SPROUT GREEN / FLUORESCENT YELLOW
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130757.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S010 – PLA Yellow&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S010
+MATERIAL: PLA
+COLOR: YELLOW
+MATERIAL MODIFIER: PRO
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA PRO SUNFLOWER YELLOW
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130809.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S011 – PLA Orange Light&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S011
+MATERIAL: PLA
+COLOR: ORANGE LIGHT
+MATERIAL MODIFIER: MATTE
+BRAND: OVERTURE
+DIAMETER: 1.75 mm
+EXTERNAL: OVERTURE PLA MATTE ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130818.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S012 – PLA Orange&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S012
+MATERIAL: PLA
+COLOR: ORANGE
+MATERIAL MODIFIER: NONE
+BRAND: TINMORY
+DIAMETER: 1.75 mm
+EXTERNAL: TINMORY PLA ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130832.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S013 – PLA Orange Bright&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S013
+MATERIAL: PLA
+COLOR: ORANGE BRIGHT
+MATERIAL MODIFIER: HIGH SPEED
+BRAND: FLASHFORGE
+DIAMETER: 1.75 mm
+EXTERNAL: FLASHFORGE PLA HIGH SPEED ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130844.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S014 – PLA Red&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S014
+MATERIAL: PLA
+COLOR: RED
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE RUBY RED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130854.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S015 – PLA Orange Terracota&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S015
+MATERIAL: PLA
+COLOR: ORANGE TERRACOTA
+MATERIAL MODIFIER: MARBLE
+BRAND: OVERTURE
+DIAMETER: 1.75 mm
+EXTERNAL: OVERTURE PLA MARBLE MARS RED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130903.png"&gt;&lt;/p&gt;</content><category term="ephemerals"/></entry><entry><title>Fazendo um Espaço Efêmero</title><link href="https://robotsandcoffee.co/pt/making-an-ephemeral-space/" rel="alternate"/><published>2026-04-27T13:29:00+01:00</published><updated>2026-04-27T13:29:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-27:/pt/making-an-ephemeral-space/</id><summary type="html">&lt;p&gt;Gosto quando as postagens de blog são o mais imutáveis ​​possível: um registro no tempo, inalterado, que captura todos os erros, os aprendizados, a ingenuidade. Novas postagens quase sempre podem atualizar o que foi publicado anteriormente, sem apagar o que já estava registrado. Uma linha do tempo interessante é formada …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Gosto quando as postagens de blog são o mais imutáveis ​​possível: um registro no tempo, inalterado, que captura todos os erros, os aprendizados, a ingenuidade. Novas postagens quase sempre podem atualizar o que foi publicado anteriormente, sem apagar o que já estava registrado. Uma linha do tempo interessante é formada, capturando o processo não linear de aprendizado.&lt;/p&gt;
+&lt;p&gt;Ultimamente, tenho sentido a necessidade de compartilhar com alguns amigos as mesmas informações, principalmente sobre as ferramentas e materiais que tenho disponíveis no meu espaço maker, para que eles possam usá-los em seus próprios projetos. Decidi, então, criar um espaço chamado "efêmeros" onde posso guardar esse tipo de informação utilitária. Não se trata necessariamente de um registro de um processo ou projeto, mas de um espaço simples que funciona como uma espécie de área de transferência pública que posso usar para enviar aos meus amigos. Ele pode ser atualizado para refletir o estado atual das coisas a qualquer momento ou ser apagado sem aviso prévio.&lt;/p&gt;
+&lt;p&gt;A primeira página contém uma biblioteca de materiais para impressão 3D (ou seja, os filamentos que tenho disponíveis), mas mais conteúdo será adicionado em breve, conforme a necessidade.&lt;/p&gt;</content><category term="articles"/></entry><entry><title>Biblioteca de Materiais para Impressão 3D</title><link href="https://robotsandcoffee.co/pt/materials-library-for-3d-printing/" rel="alternate"/><published>2026-04-27T13:29:00+01:00</published><updated>2026-04-27T13:29:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-27:/pt/materials-library-for-3d-printing/</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427131921.png"&gt;&lt;/p&gt;
+&lt;p&gt;Este espaço efêmero contém o inventário de filamentos para impressão 3D disponíveis e indisponíveis.&lt;/p&gt;
+&lt;h2&gt;S001 – PLA Branco&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S001
+MATERIAL: PLA
+COLOR: WHITE
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE WHITE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130612.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S002 – PLA Bege&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S002
+MATERIAL: PLA
+COLOR: BEIGE
+MATERIAL MODIFIER …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427131921.png"&gt;&lt;/p&gt;
+&lt;p&gt;Este espaço efêmero contém o inventário de filamentos para impressão 3D disponíveis e indisponíveis.&lt;/p&gt;
+&lt;h2&gt;S001 – PLA Branco&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S001
+MATERIAL: PLA
+COLOR: WHITE
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE WHITE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130612.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S002 – PLA Bege&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S002
+MATERIAL: PLA
+COLOR: BEIGE
+MATERIAL MODIFIER: PLUS
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PLUS BEIGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130631.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S003 – PLA Cinza Claro&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S003
+MATERIAL: PLA
+COLOR: GREY LIGHT
+MATERIAL MODIFIER: HIGH SPEED MATTE
+BRAND: ERYONE
+DIAMETER: 1.75 mm
+EXTERNAL: ERYONE PLA HIGH SPEED LIGHT GREY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130645.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S004 – PLA Cinza&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S004
+MATERIAL: PLA
+COLOR: GREY
+MATERIAL MODIFIER: MATTE
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA MATTE SLATE GREY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130702.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S005 – PLA Preto&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S005
+MATERIAL: PLA
+COLOR: BLACK
+MATERIAL MODIFIER: PLUS
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PLUS BLACK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130716.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S006 – PLA Azul&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S006
+MATERIAL: PLA
+COLOR: BLUE
+MATERIAL MODIFIER: PLUS
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA PLUS 2.0 BLUE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130728.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S007 – PLA Azul Claro&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S007
+MATERIAL: PLA
+COLOR: BLUE LIGHT
+MATERIAL MODIFIER: PRO
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PRO LIGHT BLUE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130738.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S008 – PLA Verde&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S008
+MATERIAL: PLA
+COLOR: GREEN
+MATERIAL MODIFIER: PRO
+BRAND: ELEGOO
+DIAMETER: 1.75 mm
+EXTERNAL: ELEGOO PLA PRO GREEN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130747.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S009 – PLA Verde Neon&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S009
+MATERIAL: PLA
+COLOR: GREEN NEON
+MATERIAL MODIFIER: MATTE
+BRAND: SUNLU
+DIAMETER: 1.75 mm
+EXTERNAL: SUNLU PLA MATTE SPROUT GREEN / FLUORESCENT YELLOW
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130757.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S010 – PLA Amarelo&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S010
+MATERIAL: PLA
+COLOR: YELLOW
+MATERIAL MODIFIER: PRO
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA PRO SUNFLOWER YELLOW
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130809.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S011 – PLA Laranja Claro&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S011
+MATERIAL: PLA
+COLOR: ORANGE LIGHT
+MATERIAL MODIFIER: MATTE
+BRAND: OVERTURE
+DIAMETER: 1.75 mm
+EXTERNAL: OVERTURE PLA MATTE ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130818.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S012 – PLA Laranja&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S012
+MATERIAL: PLA
+COLOR: ORANGE
+MATERIAL MODIFIER: NONE
+BRAND: TINMORY
+DIAMETER: 1.75 mm
+EXTERNAL: TINMORY PLA ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130832.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S013 – PLA Laranja Vivo&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S013
+MATERIAL: PLA
+COLOR: ORANGE BRIGHT
+MATERIAL MODIFIER: HIGH SPEED
+BRAND: FLASHFORGE
+DIAMETER: 1.75 mm
+EXTERNAL: FLASHFORGE PLA HIGH SPEED ORANGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130844.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S014 – PLA Vermelho&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S014
+MATERIAL: PLA
+COLOR: RED
+MATERIAL MODIFIER: MATTE
+BRAND: DEEPLEE
+DIAMETER: 1.75 mm
+EXTERNAL: DEEPLEE PLA MATTE RUBY RED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130854.png"&gt;&lt;/p&gt;
+&lt;h2&gt;S015 – PLA Laranja Terracota&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ARTIFACT ID: S015
+MATERIAL: PLA
+COLOR: ORANGE TERRACOTA
+MATERIAL MODIFIER: MARBLE
+BRAND: OVERTURE
+DIAMETER: 1.75 mm
+EXTERNAL: OVERTURE PLA MARBLE MARS RED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260427130903.png"&gt;&lt;/p&gt;</content><category term="ephemerals"/></entry><entry><title>A Magnifier Module for the SOLDR Kit</title><link href="https://robotsandcoffee.co/a-magnifier-module-for-the-soldr-kit/" rel="alternate"/><published>2026-04-20T12:37:00+01:00</published><updated>2026-04-20T12:37:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-20:/a-magnifier-module-for-the-soldr-kit/</id><summary type="html">&lt;p&gt;In the last few weeks, I received my SOLDR, a portable kit with a range of tools for electronic soldering. I fell in love with it. It's amazing how such a small box managed to replace a lot of junk that used to be stored in my cupboards.&lt;/p&gt;
 &lt;p&gt;As the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the last few weeks, I received my SOLDR, a portable kit with a range of tools for electronic soldering. I fell in love with it. It's amazing how such a small box managed to replace a lot of junk that used to be stored in my cupboards.&lt;/p&gt;
 &lt;p&gt;As the lazy person I am, soldering a circuit – especially when it was something small – always had a huge initial hurdle: taking things out of the cupboard, finding a free space, spreading everything out on the table, and finally, soldering what was needed amidst a universe of bits and pieces. The SOLDR considerably solved this process.&lt;/p&gt;
 &lt;p&gt;The only thing I missed was a magnifying glass module to better see the small components. My kit came with what they called a "smartphone microscope," but it didn't work very well for my needs. Since I used to use a simple magnifying glass to solve this, I was missing it.&lt;/p&gt;
@@ -15,7 +385,7 @@
 &lt;h2&gt;A quick reflection on the multiple iterations of a development process&lt;/h2&gt;
 &lt;p&gt;A one-afternoon project like this might seem simple, but it's worth highlighting the number of iterations needed to ensure proper tolerances on all joints. Often, when watching YouTube videos or reading DIY blogs, people skip this part because it's not visually "interesting".&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://robotsandcoffee.co/images/Pasted image 20260420123947.png"&gt;&lt;/p&gt;
-&lt;p&gt;The result is that almost no one talks about the three or four (or more) versions that ended up in the trash because the magnet came loose or the screw wouldn't turn. This ends up giving the impression that the project was much easier than it actually was, or that whoever designed it has a superhuman ability to get everything right the first time. In reality, good engineering (even garage engineering) is made up of mistakes, adjustments, and many tolerance tests before the final model is ready.&lt;/p&gt;</content><category term="articles"/></entry><entry><title>Um Módulo de Lupa para o Soldr Kit</title><link href="https://robotsandcoffee.co/pt/a-magnifier-module-for-the-soldr-kit/" rel="alternate"/><published>2026-04-20T12:37:00+01:00</published><updated>2026-04-20T12:37:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-20:/pt/a-magnifier-module-for-the-soldr-kit/</id><summary type="html">&lt;p&gt;Nas últimas semanas, recebi o meu SOLDR, um kit portátil com uma série de ferramentas para solda eletrônica. Me apaixonei por ele. É impressionante como uma caixinha tão pequena conseguiu substituir um monte de tralha que ficava guardada nos meus armários.&lt;/p&gt;
+&lt;p&gt;The result is that almost no one talks about the three or four (or more) versions that ended up in the trash because the magnet came loose or the screw wouldn't turn. This ends up giving the impression that the project was much easier than it actually was, or that whoever designed it has a superhuman ability to get everything right the first time. In reality, good engineering (even garage engineering) is made up of mistakes, adjustments, and many tolerance tests before the final model is ready.&lt;/p&gt;</content><category term="articles"/></entry><entry><title>Um Módulo de Lupa para o SOLDR Kit</title><link href="https://robotsandcoffee.co/pt/a-magnifier-module-for-the-soldr-kit/" rel="alternate"/><published>2026-04-20T12:37:00+01:00</published><updated>2026-04-20T12:37:00+01:00</updated><author><name>Operator</name></author><id>tag:robotsandcoffee.co,2026-04-20:/pt/a-magnifier-module-for-the-soldr-kit/</id><summary type="html">&lt;p&gt;Nas últimas semanas, recebi o meu SOLDR, um kit portátil com uma série de ferramentas para solda eletrônica. Me apaixonei por ele. É impressionante como uma caixinha tão pequena conseguiu substituir um monte de tralha que ficava guardada nos meus armários.&lt;/p&gt;
 &lt;p&gt;Como a pessoa preguiçosa que sou, soldar um circuito …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nas últimas semanas, recebi o meu SOLDR, um kit portátil com uma série de ferramentas para solda eletrônica. Me apaixonei por ele. É impressionante como uma caixinha tão pequena conseguiu substituir um monte de tralha que ficava guardada nos meus armários.&lt;/p&gt;
 &lt;p&gt;Como a pessoa preguiçosa que sou, soldar um circuito – principalmente quando era algo pequeno – sempre tinha uma barreira inicial imensa: tirar as coisas do armário, encontrar um espacinho livre, espalhar tudo na mesa e, por fim, soldar o que era preciso no meio de um universo de troços. O SOLDR resolveu consideravelmente esse processo.&lt;/p&gt;
 &lt;p&gt;A única coisa que senti falta foi um módulo com lupa para enxergar melhor os componentes pequenos. O meu kit veio com o que eles chamaram de "microscópio de smartphone", mas não funcionou muito bem para a minha necessidade. Como eu costumava usar uma lupa simples para resolver isso, estava sentindo falta dela.&lt;/p&gt;

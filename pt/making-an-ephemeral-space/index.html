@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo um Espaço Efêmero - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robos e Café - All Posts (Atom)" href="https://robotsandcoffee.co/pt/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robos e Café - All Posts (RSS)" href="https://robotsandcoffee.co/pt/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/">LOGS</a>
+                        <a href="/pt/ephemerals/">EPHM</a>
+                        <a href="/pt/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/../making-an-ephemeral-space/" class="lang-button">
+EN                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
+                </div>
+                <time datetime="2026-04-27T13:29:00+01:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2026-04-27 13-29</span>
+                </time>
+            </div>
+        </div>
+        <h1>Fazendo um Espaço Efêmero</h1>
+    </header>
+
+    <div class="post-content">
+        <p>Gosto quando as postagens de blog são o mais imutáveis ​​possível: um registro no tempo, inalterado, que captura todos os erros, os aprendizados, a ingenuidade. Novas postagens quase sempre podem atualizar o que foi publicado anteriormente, sem apagar o que já estava registrado. Uma linha do tempo interessante é formada, capturando o processo não linear de aprendizado.</p>
+<p>Ultimamente, tenho sentido a necessidade de compartilhar com alguns amigos as mesmas informações, principalmente sobre as ferramentas e materiais que tenho disponíveis no meu espaço maker, para que eles possam usá-los em seus próprios projetos. Decidi, então, criar um espaço chamado "efêmeros" onde posso guardar esse tipo de informação utilitária. Não se trata necessariamente de um registro de um processo ou projeto, mas de um espaço simples que funciona como uma espécie de área de transferência pública que posso usar para enviar aos meus amigos. Ele pode ser atualizado para refletir o estado atual das coisas a qualquer momento ou ser apagado sem aviso prévio.</p>
+<p>A primeira página contém uma biblioteca de materiais para impressão 3D (ou seja, os filamentos que tenho disponíveis), mas mais conteúdo será adicionado em breve, conforme a necessidade.</p>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>

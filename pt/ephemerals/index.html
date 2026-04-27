@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ephemerals - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robos e Café - All Posts (Atom)" href="https://robotsandcoffee.co/pt/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robos e Café - All Posts (RSS)" href="https://robotsandcoffee.co/pt/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/">LOGS</a>
+                        <a href="/pt/ephemerals/" class="nav-active">
+                            <span class="material-symbols-outlined">change_history</span>
+                        </a>
+                        <a href="/pt/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/ephemerals/" class="lang-button">EN</a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+<section class="article-list ephemerals-list">
+    <div class="page-header-top">
+        <span class="material-symbols-outlined page-icon">fullscreen_exit</span>
+        <h1>EFÊMEROS</h1>
+    </div>
+    <ul>
+        <li class="article-item">
+            <a href="https://robotsandcoffee.co/pt/materials-library-for-3d-printing/" class="article-link">
+                <span class="material-symbols-outlined article-icon">deployed_code</span>
+                <div class="article-info">
+                    <time datetime="2026-04-27T13:29:00+01:00">
+                        2026-04-27 13-29
+                    </time>
+                    <span class="article-title">
+                        Biblioteca de Materiais para Impressão 3D
+                    </span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>

@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <link rel="stylesheet" href="/theme/css/main.css?793e669f">
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
     
     <script>
         // Apply theme immediately to avoid flash
@@ -49,6 +49,7 @@
         <nav class="main-nav">
             <div class="nav-links">
                         <a href="/pt/">LOGS</a>
+                        <a href="/pt/ephemerals/">EPHM</a>
                         <a href="/pt/pages/info/">INFO</a>
             </div>
 
@@ -64,26 +65,26 @@ EN                        </a>
     </header>
 
     <main class="content">
-    <article class="post">
-        <header>
-            <div class="post-header-top">
-                <span class="material-symbols-outlined post-icon">sim_card_download</span>
-                <div class="post-header-info">
-                    <div class="post-meta">
-                        <span class="meta-label">TYPE:</span>
-                        <span class="meta-value">LOG</span>
-                    </div>
-                    <time datetime="2025-03-18T16:00:00+00:00">
-                        <span class="meta-label">TIMESTAMP:</span>
-                        <span class="meta-value">2025-03-18 16-00</span>
-                    </time>
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
                 </div>
+                <time datetime="2025-03-18T16:00:00+00:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2025-03-18 16-00</span>
+                </time>
             </div>
-            <h1>Criando o Pocket Operator Television</h1>
-        </header>
-        
-        <div class="post-content">
-            <p>Esse ano o pocket operator completou dez anos desde a sua criação. E, pra celebrar essa marca, a Teenage Engineering decidiu fazer um concurso de criações DIY que envolvam o pocket operator de alguma forma, o <code>#PO10DIY</code>. É claro que eu tinha que participar.</p>
+        </div>
+        <h1>Criando o Pocket Operator Television</h1>
+    </header>
+
+    <div class="post-content">
+        <p>Esse ano o pocket operator completou dez anos desde a sua criação. E, pra celebrar essa marca, a Teenage Engineering decidiu fazer um concurso de criações DIY que envolvam o pocket operator de alguma forma, o <code>#PO10DIY</code>. É claro que eu tinha que participar.</p>
 <p>Na verdade, quando vi a publicação pela primeira vez, não consegui pensar em nada que pudesse fazer pra entrar. Mas não conseguia tirar da cabeça a ideia de um braço mecânico dançando em conjunto com um pocket operator.</p>
 <p>Recentemente estava lendo um artigo publicado por uma equipe de robótica da Apple que experimentou com um robô de mesa que tenta integrar movimentos mais expressivos a sua rotina (<a href="https://arxiv.org/pdf/2501.12493">ELEGNT: Expressive and Functional Movement Design for Non-anthropomorphic Robot</a>). Esse tipo de robótica (e computação) que tenta fugir de um utilitarismo raso é algo que mora no fundo do meu coração. A própria Teenage Engineering já experimentou com algo muito parecido no <a href="https://robosecafe.substack.com/p/criando-o-pocket-operator-television#:~:text=%22R%22%2C%20um%20rob%C3%B4%20de%20mesa">"R", um robô de mesa</a> que tinha "emoção" como função.</p>
 <p>Esse artigo da Apple reascendeu uma vontade antiga que tenho de tentar criar um robô como o R. Mas, desenvolver (durante os fins de semana) um robô como esses e fazê-lo ser capaz de "ouvir" o meu pocket operator a tempo do prazo do concurso seria uma tarefa hercúlea. Esquece, seria legal, mas não vai dar dessa vez. Deixa pra lá.</p>
@@ -191,12 +192,12 @@ EN                        </a>
 </ol>
 <p><strong>Adicione uma chamada à sua nova função de animação</strong></p>
 <p>Seja copiando uma animação já existente e modificando-a ou criando uma nova do zero, é preciso adicionar uma chamada à nova função no loop principal do código. Para isso, no arquivo <code>main.py</code>, basta <a href="https://github.com/EEmery/po-television/blob/main/src/main.py#L3-L6">importar a função</a> e adicionar na <a href="https://github.com/EEmery/po-television/blob/main/src/main.py#L8-L14">lista de funções chamada <code>ANIMATIONS</code></a>.</p>
-        </div>
-        
-        <footer class="post-footer">
-            <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
-        </footer>
-    </article>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
     </main>
 
     <!-- <footer class="main-footer">

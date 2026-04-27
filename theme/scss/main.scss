@@ -8,7 +8,12 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $font-main;
     font-weight: 600;
 }
@@ -56,7 +61,9 @@ a {
     gap: 1rem;
 }
 
-.nav-links a, .nav-controls a, .nav-controls button {
+.nav-links a,
+.nav-controls a,
+.nav-controls button {
     text-decoration: none;
     font-family: $font-display;
     font-weight: 400;
@@ -64,9 +71,13 @@ a {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
+    @media (min-width: 480px) {
+        padding: 0.5rem 0.75rem;
+    }
+
     &:hover {
         background-color: var(--color-text);
         color: var(--color-bg);
@@ -79,21 +90,25 @@ a {
 }
 
 .nav-links a {
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
+
+    @media (min-width: 480px) {
+        margin-right: 0.5rem;
+    }
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 1.25rem;
-    
+
     &:first-child {
         margin-left: -0.75rem;
     }
-    
+
     &.nav-active {
         background-color: var(--color-text);
         color: var(--color-bg);
     }
-    
+
     .material-symbols-outlined {
         font-size: 1.25rem;
         line-height: 1;
@@ -105,7 +120,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0;
-    
+
     .material-symbols-outlined {
         font-size: 1.25rem;
     }
@@ -139,16 +154,16 @@ a {
         padding: 0;
         margin: 2rem 0;
     }
-    
+
     .article-item {
         margin-bottom: 1.5rem;
         border-bottom: 1px solid var(--color-border);
-        
+
         &:last-child {
             border-bottom: none;
         }
     }
-    
+
     .article-link {
         display: flex;
         align-items: flex-start;
@@ -159,44 +174,52 @@ a {
         color: var(--color-text);
         background-color: transparent;
         transition: background-color 0.3s ease, color 0.3s ease;
-        
+
         &:hover {
             background-color: var(--color-text);
             color: var(--color-bg);
         }
     }
-    
+
     .article-icon {
         font-size: 2.6rem;
         flex-shrink: 0;
         margin-top: 0.125rem;
         margin-left: -0.25rem;
         font-size: 0; // Hide original text
-        
+
         &::before {
             content: "sd_card";
             font-size: 2.6rem;
             font-family: "Material Symbols Outlined";
         }
     }
-    
+
     .article-link:hover .article-icon::before {
         content: "sim_card_download";
     }
-    
+
+    &.ephemerals-list .article-icon::before {
+        content: "deployed_code";
+    }
+
+    &.ephemerals-list .article-link:hover .article-icon::before {
+        content: "package_2";
+    }
+
     .article-info {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
         flex: 1;
     }
-    
+
     time {
         font-family: $font-mono;
         font-size: 0.875rem;
         color: inherit;
     }
-    
+
     .article-title {
         font-size: 1rem;
         font-family: $font-mono;
@@ -216,7 +239,7 @@ a {
         border-bottom: 1px solid var(--color-border);
         margin-bottom: 2rem;
     }
-    
+
     .post-icon {
         flex-shrink: 0;
         // font-size: 3.5rem;
@@ -224,28 +247,28 @@ a {
         font-size: 2.6rem;
         margin-left: -0.25rem;
     }
-    
+
     .post-header-info {
         flex: 1;
         margin-top: 1rem;
     }
-    
+
     header .post-meta,
     header time {
         display: block;
         font-family: $font-mono;
         font-size: 0.875rem;
     }
-    
+
     header .meta-label {
         display: inline-block;
         width: 10ch; // Width to fit "LOG TIMESTAMP:"
     }
-    
+
     header .meta-value {
         display: inline-block;
     }
-    
+
     header h1 {
         margin-top: 2rem;
     }
@@ -268,14 +291,15 @@ html.theme-dark .post-signature {
 }
 
 // --- Markdown Styling ---
-.post-content, .page-content {
+.post-content,
+.page-content {
     line-height: 1.7;
 
     img {
         max-width: 100%;
         height: auto;
     }
-    
+
     blockquote {
         margin-left: 1.25rem;
         border-left: 4px solid;
@@ -301,7 +325,12 @@ code {
 }
 
 // Code in headers should match header size
-h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
     font-size: inherit;
 }
 
@@ -360,4 +389,3 @@ pre {
 code {
     background-color: var(--color-code-bg);
 }
-
