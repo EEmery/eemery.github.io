@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deixando o KORG nanoKontrol Mais Colorido - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robos e Café - All Posts (Atom)" href="https://robotsandcoffee.co/pt/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robos e Café - All Posts (RSS)" href="https://robotsandcoffee.co/pt/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/">LOGS</a>
+                        <a href="/pt/ephemerals/">EPHM</a>
+                        <a href="/pt/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/../making-the-korg-nanokontrol-more-colorful/" class="lang-button">
+EN                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
+                </div>
+                <time datetime="2026-05-16T14:50:00+01:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2026-05-16 14-50</span>
+                </time>
+            </div>
+        </div>
+        <h1>Deixando o KORG nanoKontrol Mais Colorido</h1>
+    </header>
+
+    <div class="post-content">
+        <p>Tenho trabalhado num projeto que tem vários desses servos pequenininhos, cerca de 8, mas com a chance de aumentar um pouco mais. O projeto não é complexo, nem no hardware nem no software. O problema é que, as vezes, no processo de desenvolvimento eu preciso alinhar os servos em alguma posição específica, ajustar uma ou outra tolerância etc.</p>
+<p>Daí pra me ajudar nessas tarefas, comecei a experimentar usar o KORG nanoKontrol 2 já que ele possui 8 faders e 8 knobs. Ele ficaria sempre no cantinho da mesa e toda vez que eu precisasse mover um servo de um jeito ou de outro era só fazer isso diretamente no nanoKontrol.</p>
+<p>Pra facilitar lembrar que fader controla que servo, eu poderia simplesmente etiquetar cada um deles com um ABC ou 123. Mas achei que poderia ser mais divertido se eu desenhasse os meus próprios knobs e faders e imprimisse cada um com uma cor diferente. Assim eu poderia diferenciar mais facilmente, além de deixar o nanoKontrol mais divertido.</p>
+<p><img alt="" src="https://robotsandcoffee.co/pt/images/Pasted image 20260516184427.png"></p>
+<p>Fiz cada canal de uma cor que seja fácil de associar no código: <code>vermelho</code>, 'laranja', <code>amarelo</code>. Mas evitei usar subtons pra não deixar as coisas confusas, por exemplo, ter um <code>laranja</code> e um <code>laranja-escuro</code>. Dá pra ir mais além nessa ideia de "etiquetar" com cores e ter, por exemplo, dois canais que dividem a mesma cor (<code>azul-a</code>, <code>azul-b</code>) caso eles pertençam a um mesmo contexto na aplicação.</p>
+<p><img alt="" src="https://robotsandcoffee.co/pt/images/Pasted image 20260516151026.png"></p>
+<p>Já imprimi vários desses em várias cores pra poder sair trocando de acordo com o que fizer sentido no projeto. Tem facilitado bastante.</p>
+<p>Baixe aqui os knobs e faders que fiz:</p>
+<ul>
+<li><a href="https://github.com/EEmery/assets-repository/tree/main/models/KORG%20nanoKontrol%202%20Knobs%20and%20Faders">GitHub</a></li>
+<li>Printables</li>
+</ul>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>
