@@ -21,4 +21,4 @@ I've already printed several of these in various colors so I can switch them aro
 Download the knobs and faders I made:
 
 - [GitHub](https://github.com/EEmery/assets-repository/tree/main/models/KORG%20nanoKontrol%202%20Knobs%20and%20Faders)
-- Printables
+- [Printables](https://www.printables.com/model/1723262-korg-nanokontrol-2-alternative-knobs-and-faders/files)
