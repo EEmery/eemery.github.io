@@ -19,5 +19,6 @@ As for colors, I used white PLA for the main body. I chose gray EVA foam instead
 A personal note: this is a traveling case, not a storing case. I don't think pocket operators deserve to be tucked away, if anything, they deserve to be in a place where we can easily see them. One of the most incredible features of the Pocket Operator is how attractive it is – I think Pocket Operators are creative block destroyer machines, always have one at arms length.
 
 You can access the 3D models and download the files below.
+
 - [GitHub](https://github.com/EEmery/assets-repository/tree/main/models/Pocket%20Operator%20Travel%20Case)
 - [Printables](https://www.printables.com/model/1780476-pocket-operator-travel-case)

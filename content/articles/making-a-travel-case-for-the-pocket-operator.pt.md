@@ -19,5 +19,6 @@ Quanto as cores, usei um PLA branco nas partes principais, um EVA cinza ao invé
 Uma nota pessoal: esta é uma proteção para transporte, não para armazenamento. Na verdade, não acho que os Pocket Operators devam ficar guardados, pelo contrário, merecem estar sempre à vista. Uma das características mais incríveis do Pocket Operator é o seu visual atraente — para mim, eles são máquinas de acabar com o bloqueio criativo, por isso, mantenha sempre um ao alcance das mãos.
 
 Você pode acessar os modelos 3D para baixar os arquivos abaixo.
+
 - [GitHub](https://github.com/EEmery/assets-repository/tree/main/models/Pocket%20Operator%20Travel%20Case)
 - [Printables](https://www.printables.com/model/1780476-pocket-operator-travel-case)
