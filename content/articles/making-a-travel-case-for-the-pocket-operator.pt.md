@@ -1,5 +1,5 @@
 Title: Fazendo um Invólucro de Viagem para o Pocket Operator
-Date: 2026-07-07 20:54
+Date: 2026-07-13 19:54
 Lang: pt
 Slug: making-a-travel-case-for-the-pocket-operator
 Translation: true
