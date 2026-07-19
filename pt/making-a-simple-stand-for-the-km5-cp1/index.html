@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo um estande simples para o CP1 da KM5 - Robos e Café</title>
+    
+    <link rel="icon" type="image/x-icon" href="/theme/images/logo.svg">
+
+    <!-- RSS/ATOM Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Robos e Café - All Posts (Atom)" href="https://robotsandcoffee.co/pt/feeds/all.atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Robos e Café - All Posts (RSS)" href="https://robotsandcoffee.co/pt/feeds/all.rss.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="/theme/css/main.css?04ef23bf">
+    
+    <script>
+        // Apply theme immediately to avoid flash
+        (function() {
+            const storageKey = 'theme-preference';
+            const savedTheme = localStorage.getItem(storageKey);
+            let theme;
+            
+            if (savedTheme) {
+                // User has a saved preference - use it
+                theme = savedTheme;
+            } else {
+                // No saved preference - check system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            document.documentElement.className = 'theme-' + theme;
+        })();
+    </script>
+    
+    <script src="/theme/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                        <a href="/pt/">LOGS</a>
+                        <a href="/pt/ephemerals/">EPHM</a>
+                        <a href="/pt/pages/info/">INFO</a>
+            </div>
+
+            <div class="nav-controls">
+                        <a href="/../making-a-simple-stand-for-the-km5-cp1/" class="lang-button">
+EN                        </a>
+
+                <button id="theme-toggle-btn" class="theme-icon">
+                    <span class="material-symbols-outlined">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+<article class="post">
+    <header>
+        <div class="post-header-top">
+            <span class="material-symbols-outlined post-icon">sim_card_download</span>
+            <div class="post-header-info">
+                <div class="post-meta">
+                    <span class="meta-label">TYPE:</span>
+                    <span class="meta-value">LOG</span>
+                </div>
+                <time datetime="2026-07-19T13:57:00+01:00">
+                    <span class="meta-label">TIMESTAMP:</span>
+                    <span class="meta-value">2026-07-19 13-57</span>
+                </time>
+            </div>
+        </div>
+        <h1>Fazendo um estande simples para o CP1 da KM5</h1>
+    </header>
+
+    <div class="post-content">
+        <p>Adoro meu toca CDs transparente, o CP1 da KM5. Ele é simples, portátil e bastante versátil. Outro dia, ao tentar atingir velocidade de escape do mundo da preguiça, decidi criar um simples suporte para ele. A KM5 já vende um suporte de alumínio muito legal, mas eu queria não só fazer o meu próprio, como também ter um que fosse um pouco diferente.</p>
+<p>Poucos dias antes desse rápido projeto, eu estava passando por umas lojas no centro da cidade, enquanto voltava do trabalho. Eu não estava prestando atenção nas vitrines, minha cabeça estava nas nuvens prestando atenção nas músicas que ouvia, mas uma imagem me marcou: uma luminária pequena, com cara de equipamento de canteiro de obras, sendo usada para iluminar a vitrine.</p>
+<p><img alt="" src="https://robotsandcoffee.co/pt/images/Pasted image 20260719144426.png"></p>
+<p>Sou fascinado pela estética de infraestrutura urbana e adoro quando objetos que parecem pertencer a fábricas ou canteiros de obras se misturam ao ambiente cotidiano. É como tornar ainda mais evidente a maneira como construímos ativamente nossa realidade diária. Para mim, um equipamento de construção no meio da cidade é o equivalente a um dispositivo transparente que revela a sua engenharia interna, seu funcionamento.</p>
+<p>Tive que voltar à loja no dia seguinte para tirar uma foto. Eu estava apaixonado por aquela luminária (e ainda estou).</p>
+<p>Decidi, então, criar um suporte para o CP1 inspirado nela. Achei que combinaria perfeitamente com o design do dispositivo. Optei por formas muito simples e geométricas, para combinar com o visual minimalista e com o estilo mais quadradinho do CP1, além de seguir a estética industrial daquela luminária.</p>
+<p><img alt="" src="https://robotsandcoffee.co/pt/videos/20260719_134050-ANIMATION.gif"></p>
+<p>Para minimizar o uso de suportes na impressão, dividi o estande em duas partes, sendo uma a versão espelhada da outra (o espelhamento foi feito no software de fatiamento (slicer), portanto, existe apenas um modelo 3D para ambas as partes). Criei uma peça adicional para unir os dois lados sem precisar de cola: um pino com formato hexagonal. Por fim, dois parafusos de cabeça chata M4 de 18 mm fixam o suporte ao CP1.</p>
+<p><img alt="" src="https://robotsandcoffee.co/pt/images/Pasted image 20260719145127.png"></p>
+<p>Você pode acessar os modelos 3D para baixar os arquivos abaixo.</p>
+<ul>
+<li><a href="https://github.com/EEmery/assets-repository/tree/main/models/KM5%20CP1%20Stand">GitHub</a></li>
+<li><a href="[https://www.printables.com/model/1780476-pocket-operator-travel-case](https://www.printables.com/model/1785392-km5-cp1-cd-player-stand)">Printables</a></li>
+</ul>
+    </div>
+
+    <footer class="post-footer">
+        <img src="/theme/images/signature.gif" alt="Signature" class="post-signature">
+    </footer>
+</article>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <p>&copy; Robos e Café</p>
+    </footer> -->
+
+</body>
+</html>
