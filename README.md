@@ -30,6 +30,10 @@ This will break the visualisation in Obsidian but enable Pelican to render the i
 
 Using the Obsidian style of attaching images (both the markdown with `![]()` and obsidian wikilinks `[[]]`) fail due to path differences in how Obsidian and Pelican look for images. I've tries unsuccessfully using this pelican plugin [Obsidian: A Plugin for Pelican - GitHub](https://github.com/jonathan-s/pelican-obsidian), but it is worth deep diving into it or checking out other things that the community has to offer.
 
+### Attaching GIFs
+
+Same as attaching images. Just paste the GIF as a normal image and then replace `content/` for `{static}/`. I've been saving all gifs and videos under the `videos/` folder, not sure if that is the better solution long term.
+
 ### Attaching Local Videos
 
 Manually move the `.mp4` file to the `content/videos/` folder. Then, in the article page, add the code bellow targeting the path of the video file.
